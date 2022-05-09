@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "iamjameswalters.github.io"
+version = "0.1.0"
+description = "Repository for my blog, james.walters.click"
+authors = ["James Walters <33947683+iamjameswalters@users.noreply.github.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pelican = "^4.7.2"
+Markdown = "^3.3.7"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
