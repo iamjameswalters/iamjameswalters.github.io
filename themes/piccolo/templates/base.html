@@ -83,12 +83,16 @@
   <main style="padding-bottom: 0;padding-top: 0;" class="container">
     {% block content_title %}
 <section style="display: grid; display: flex; align-items: center; margin-bottom: 0;">
+  {% if SITESUBTITLE %}
   <hgroup style="grid-row: 1;width: 100%; margin-bottom: 0;">
   <h1>{{ SITENAME }}</h1>
-  {% if SITESUBTITLE %}
   <h2>{{ SITESUBTITLE }}</h2>
-  {% endif %}
   </hgroup>
+  {% else %}
+  <div style="grid-row: 1;width: 100%; margin-bottom: 0;">
+    <h1>{{ SITENAME }}</h1>
+  </div>
+  {% endif %}
 
   <div style="grid-row: 1; display: flex; align-items: center; justify-content: end;">
     <img src="https://www.gravatar.com/avatar/{{ GRAVATAR_HASH }}?s=200&d=https%3A%2F%2Fraw.githubusercontent.com%2Fiamjameswalters%2Fpiccolo%2Fmain%2Fpiccolo.png" style="width: 200px; border-radius: 50%;">
