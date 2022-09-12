@@ -5,3 +5,5 @@ Category: Review
 # Bereshiyt
 
 In the beginning, God created the heavens and the earth.
+
+<pre><code class="language-css">p { color: red }</code></pre>
