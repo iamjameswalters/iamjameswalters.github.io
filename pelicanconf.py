@@ -1,6 +1,6 @@
 AUTHOR = 'James Walters'
 SITENAME = 'james.walters.click'
-SITESUBTITLE = "Just testing right now."
+SITESUBTITLE = "Thoughts and lessons learned along the path of software development."
 SITEURL = 'https://james.walters.click'
 
 GRAVATAR_HASH = '04574f5e4a03ae08ef293b9adc5bc2e3'
@@ -35,3 +35,9 @@ DEFAULT_PAGINATION = 8
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+STATIC_PATHS = ['images', 'extra/CNAME', 'extra/robots.txt']
+EXTRA_PATH_METADATA = {
+  'extra/CNAME': {'path': 'CNAME'},
+  'extra/robots.txt': {'path': 'robots.txt'},
+  }
