@@ -37,6 +37,20 @@ python-versions = ">=3.6"
 pytz = ">=0a"
 
 [[package]]
+name = "ghp-import"
+version = "2.1.0"
+description = "Copy your docs directly to the gh-pages branch."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+python-dateutil = ">=2.8.1"
+
+[package.extras]
+dev = ["wheel", "flake8", "markdown", "twine"]
+
+[[package]]
 name = "importlib-metadata"
 version = "4.12.0"
 description = "Read metadata from Python packages"
@@ -195,7 +209,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "9ff4bc7e7cf66c94d8694ba6c2b284085c9f5365bc51c2adca1a135596f3e0cd"
+content-hash = "856d99f42b43b70e53da1728376cf2b0c7371e98f9b39e67a6f217076a1e6465"
 
 [metadata.files]
 blinker = [
@@ -213,6 +227,10 @@ docutils = [
 feedgenerator = [
     {file = "feedgenerator-2.0.0-py3-none-any.whl", hash = "sha256:fc4a1e557f56b072d4f9a1b062cc98ea3691133bbd966d85707a7d5629b2e32e"},
     {file = "feedgenerator-2.0.0.tar.gz", hash = "sha256:6836d456b8b0edbc5b6d3a42d1be852cebd43d2f28af4ff51789eb295f1860e2"},
+]
+ghp-import = [
+    {file = "ghp-import-2.1.0.tar.gz", hash = "sha256:9c535c4c61193c2df8871222567d7fd7e5014d835f97dc7b7439069e2413d343"},
+    {file = "ghp_import-2.1.0-py3-none-any.whl", hash = "sha256:8337dd7b50877f163d4c0289bc1f1c7f127550241988d568c1db512c4324a619"},
 ]
 importlib-metadata = [
     {file = "importlib_metadata-4.12.0-py3-none-any.whl", hash = "sha256:7401a975809ea1fdc658c3aa4f78cc2195a0e019c5cbc4c06122884e9ae80c23"},

@@ -8,6 +8,7 @@ authors = ["James Walters <33947683+iamjameswalters@users.noreply.github.com>"]
 python = "^3.8"
 pelican = "^4.7.2"
 Markdown = "^3.3.7"
+ghp-import = "^2.1.0"
 
 [tool.poetry.dev-dependencies]
 
