@@ -1,8 +1,12 @@
 AUTHOR = 'James Walters'
 SITENAME = 'james.walters.click'
-SITEURL = ''
+SITEURL = 'https://james.walters.click'
+
+GRAVATAR_HASH = '04574f5e4a03ae08ef293b9adc5bc2e3'
 
 PATH = 'content'
+
+THEME = "themes/piccolo"
 
 TIMEZONE = 'America/Indianapolis'
 
@@ -16,16 +20,15 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),
-         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-         ('You can modify those links in your config file', '#'),)
+# LINKS = (('Pelican', 'https://getpelican.com/'),
+#          ('Python.org', 'https://www.python.org/'),
+#          ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
+#          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('Github', 'http://github.com/iamjameswalters'),)
 
-DEFAULT_PAGINATION = False
+DEFAULT_PAGINATION = 8
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
