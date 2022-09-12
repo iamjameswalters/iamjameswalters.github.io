@@ -1,5 +1,6 @@
 AUTHOR = 'James Walters'
 SITENAME = 'james.walters.click'
+SITESUBTITLE = "Just testing right now."
 SITEURL = 'https://james.walters.click'
 
 GRAVATAR_HASH = '04574f5e4a03ae08ef293b9adc5bc2e3'
