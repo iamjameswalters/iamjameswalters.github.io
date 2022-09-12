@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block html_lang %}{{ page.lang }}{% endblock %}
+
+{% block title %}{{ SITENAME }} - {{ page.title|striptags }}{%endblock%}
+
+{% block head %}
+  {{ super() }}
+
+  {% import 'translations.html' as translations with context %}
+  {% if translations.entry_hreflang(page) %}
+    {{ translations.entry_hreflang(page) }}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+<article>
+  <header>
+    {% if page.modified %}
+    <hgroup>
+      <h2>{{ page.title }}</h2>
+    <h3>
+    Edited {{ page.locale_modified }}.
+    </h3>
+    </hgroup>
+    {% else %}
+    <h2 style="margin-bottom: 0;">{{ page.title }}</h2>
+    {% endif %}
+  </header>
+    {% import 'translations.html' as translations with context %}
+    {{ translations.translations_for(page) }}
+
+    {{ page.content }}
+
+  </article>
+{% endblock %}

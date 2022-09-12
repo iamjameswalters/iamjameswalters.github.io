@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% for article in articles_page.object_list %}
+  <article{% if articles_page.has_other_pages() and loop.index == loop.length %} style="margin-bottom: 40px;"{% endif %}>
+    <header style="display: grid;">
+      <hgroup>
+        <h2>
+          <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+             title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+             <h3>By
+              {% for author in article.authors %}
+              <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% if loop.index != loop.length %}, {% endif %}
+              {% endfor %}
+               on <time class="published" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>.{% if article.modified %}<br />Edited <time datetime="{{ article.modified.isoformat() }}">{{ article.locale_modified }}</time>{% endif %}</h3>
+        </hgroup>
+        {% if article.category or article.tags %}
+              <aside style="grid-column: 2; display: flex; align-items: end; justify-content: end; margin-bottom: 30px;">
+                {% if article.category %}
+               <div style="color: #73828c">Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>{% endif %}
+               {% if article.tags %}
+              <br />Tags: 
+                {% for tag in article.tags %}
+                <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if loop.index != loop.length %}, {% endif %}
+                {% endfor %}
+              {% endif %}
+            </div>
+              </aside>
+              {% endif %}
+  </header>
+    {{ article.summary }}
+    <!-- <footer>
+      <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
+      <address>By
+        {% for author in article.authors %}
+        <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+        {% endfor %}
+      </address>
+    </footer>
+     -->
+  </article>
+  {% endfor %}
+  
+
+  {% if articles_page.has_other_pages() %}
+  {% include 'pagination.html' %}
+  {% endif %}
+
+
+{% endblock %}

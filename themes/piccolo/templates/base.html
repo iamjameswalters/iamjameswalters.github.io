@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+
+<head>
+  {% block head %}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Pelican" />
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pico.min.css" />
+  {% if FEED_ALL_ATOM %}
+  <link
+    href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
+    type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+  {% endif %}
+  {% if FEED_ALL_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
+    type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+  {% endif %}
+  {% if FEED_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}"
+    type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+  {% endif %}
+  {% if FEED_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}"
+    type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+  {% endif %}
+  {% if CATEGORY_FEED_ATOM and category %}
+  <link
+    href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}{% endif %}"
+    type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+  {% endif %}
+  {% if CATEGORY_FEED_RSS and category %}
+  <link
+    href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_RSS.format(slug=category.slug) }}{% endif %}"
+    type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
+  {% endif %}
+  {% if TAG_FEED_ATOM and tag %}
+  <link
+    href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_ATOM.format(slug=tag.slug) }}{% endif %}"
+    type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
+  {% endif %}
+  {% if TAG_FEED_RSS and tag %}
+  <link
+    href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}"
+    type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+  {% endif %}
+  {% endblock %}
+  <style>
+    article img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container">
+  <nav>
+    <ul>
+      <li><a href="{{ SITEURL }}">{% if page_name == "index" %}<strong>{% endif %}All Posts{% if page_name == "index" %}</strong>{% endif %}</a></li>
+    </ul>
+    <ul>
+      {% for title, link in MENUITEMS %}
+      <li><a href="{{ link }}">{{ title }}</a></li>
+      {% endfor %}
+
+      {% if DISPLAY_CATEGORIES_ON_MENU %}{% if MENUITEMS %}&nbsp;&nbsp;|&nbsp;&nbsp;{% endif %}
+        {% for cat, null in categories %}
+        <li>{% if cat == category %}<strong>{% endif %}<a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>{% if cat == category %}</strong>{% endif %}</li>
+          {% endfor %}
+          {% endif %}
+
+      {% if DISPLAY_PAGES_ON_MENU %}{% if MENUITEMS or (DISPLAY_CATEGORIES_ON_MENU and categories) %}&nbsp;&nbsp;|&nbsp;&nbsp;{% endif %}
+      {% for p in pages %}
+      <li>{% if p == page %}<strong>{% endif %}<a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>{% if p == page %}</strong>{% endif %}</li>
+        {% endfor %}
+        {% endif %}
+    </ul>
+  </nav>
+  </header>
+  <main style="padding-bottom: 0;padding-top: 0;" class="container">
+    {% block content_title %}
+<section style="display: grid; display: flex; align-items: center; margin-bottom: 0;">
+  <hgroup style="grid-row: 1;width: 100%; margin-bottom: 0;">
+  <h1>{{ SITENAME }}</h1>
+  {% if SITESUBTITLE %}
+  <h2>{{ SITESUBTITLE }}</h2>
+  {% endif %}
+  </hgroup>
+
+  <div style="grid-row: 1; display: flex; align-items: center; justify-content: end;">
+    <img src="https://www.gravatar.com/avatar/{{ GRAVATAR_HASH }}?s=200&d=https%3A%2F%2Fraw.githubusercontent.com%2Fiamjameswalters%2Fpiccolo%2Fmain%2Fpiccolo.png" style="width: 200px; border-radius: 50%;">
+  </div>
+</section>
+  {% endblock %}
+    {% block content %}
+    {% endblock %}
+  </main>
+  <footer style="display: grid; padding-top: 0;" class="container">
+    {% if SOCIAL %}
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Social:</strong></li>
+      </ul>
+      <ul>
+      {% for name, link in SOCIAL %}
+      <li><a href="{{ link }}">{{ name }}</a></li>
+      {% endfor %}
+      </ul>
+    </nav>
+    </aside>
+    {% endif %}
+    {% if LINKS %}
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Links:</strong></li>
+      </ul>
+      <ul>
+      {% for name, link in LINKS %}
+      <li><a href="{{ link }}">{{ name }}</a></li>
+      {% endfor %}
+      </ul>
+    </nav>
+    </aside>
+    {% endif %}
+
+    {% if FEED_ALL_ATOM or FEED_ALL_RSS %}
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Feeds:</strong></li>
+      </ul>
+      <ul>
+        {% if FEED_ALL_ATOM %}
+        <li><a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate">Atom feed</a></li>
+        {% endif %}
+        {% if FEED_ALL_RSS %}
+        <li><a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate">RSS feed</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+    </aside>
+    {% endif %}
+
+    <div style="grid-row: 2; grid-column: span 3;">
+      <hr />
+      <p style="padding-top: 0.5em;">
+      Built using the <a href="https://github.com/iamjameswalters/piccolo">Piccolo</a> theme, based on <a href="https://picocss.com/">Pico.css</a>.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
