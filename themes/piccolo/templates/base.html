@@ -8,6 +8,7 @@
   <meta name="generator" content="Pelican" />
   <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pico.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/prism.css" />
   {% if FEED_ALL_ATOM %}
   <link
     href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
@@ -53,6 +54,7 @@
       margin-right: auto;
     }
   </style>
+  <script type="text/javascript" src="{{ SITEURL }}/theme/js/prism.js" defer></script>
 </head>
 
 <body>
