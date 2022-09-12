@@ -5,6 +5,8 @@ SITEURL = 'https://james.walters.click'
 
 GRAVATAR_HASH = '04574f5e4a03ae08ef293b9adc5bc2e3'
 
+DISPLAY_PAGES_ON_MENU = False
+
 PATH = 'content'
 
 THEME = "themes/piccolo"
