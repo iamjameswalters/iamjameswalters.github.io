@@ -8,12 +8,46 @@
   <title>james.walters.click - Articles by James Walters</title>
   <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/pico.min.css" />
   <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/prism.css" />
+  <link
+    href="https://james.walters.click/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="james.walters.click Full Atom Feed" />
   <style>
     article img {
       display: block;
       margin-left: auto;
       margin-right: auto;
     }
+
+    #hero {
+      align-items: center; 
+      margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 481px) { 
+      #hero {
+      display: flex; 
+    }
+
+    #hero div {
+      display: flex;
+    }
+
+    #hero img {
+      width: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) { 
+    #hero div {
+      display: block;
+      text-align: center;
+    }
+
+    #hero img {
+      width: 150px;
+      margin-top: 2em;
+    }
+  }
   </style>
   <script type="text/javascript" src="https://james.walters.click/theme/js/prism.js" defer></script>
 </head>
@@ -26,7 +60,7 @@
     </ul>
     <ul>
 
-        <li><a href="https://james.walters.click/category/review.html">Review</a></li>
+        <li><a href="https://james.walters.click/category/meta.html">Meta</a></li>
 
     </ul>
   </nav>
@@ -37,20 +71,19 @@
     <header style="display: grid;">
       <hgroup>
         <h2>
-          <a href="https://james.walters.click/my-first-review.html" rel="bookmark"
-             title="Permalink to My First Review">My First Review</a></h2>
+          <a href="https://james.walters.click/oh-no-not-another-dev-blog.html" rel="bookmark"
+             title="Permalink to Oh no, not another dev blog">Oh no, not another dev blog</a></h2>
              <h3>By
-              <a href="https://james.walters.click/author/james-walters.html">James Walters</a>               on <time class="published" datetime="2010-12-03T10:20:00-05:00">Fri 03 December 2010</time>.</h3>
+              <a href="https://james.walters.click/author/james-walters.html">James Walters</a>               on <time class="published" datetime="2022-09-13T00:00:00-04:00">Tue 13 September 2022</time>.</h3>
         </hgroup>
               <aside style="grid-column: 2; display: flex; align-items: end; justify-content: end; margin-bottom: 30px;">
-               <div style="color: #73828c">Category: <a href="https://james.walters.click/category/review.html">Review</a>            </div>
+               <div style="color: #73828c">Category: <a href="https://james.walters.click/category/meta.html">Meta</a>            </div>
               </aside>
   </header>
-    <h1>Bereshiyt</h1>
-<p>In the beginning, God created the heavens and the earth.</p>
-<pre><code class="language-css">p { color: red }</code></pre>
+    <p>Hi there! 👋</p>
+<p>I'm James, and I've decided to start a dev blog. It's a bit of a cliché, I know, but for me I think it will be a fruitful exercise. I like writing, and I've tried blogging over the years, but I've never really found a good fit for …</p>
     <!-- <footer>
-      <time class="published" datetime="2010-12-03T10:20:00-05:00"> Fri 03 December 2010 </time>
+      <time class="published" datetime="2022-09-13T00:00:00-04:00"> Tue 13 September 2022 </time>
       <address>By
         <a href="https://james.walters.click/author/james-walters.html">James Walters</a>
       </address>
@@ -62,7 +95,7 @@
 
 
   </main>
-  <footer style="display: grid; padding-top: 0;" class="container">
+  <footer style="display: grid; grid-template-columns: repeat(auto-fit, [col-start] minmax(100px, 1fr) [col-end]); padding-top: 0;" class="container">
     <aside style="grid-row: 1;">
     <nav>
       <ul>
@@ -74,6 +107,16 @@
     </nav>
     </aside>
 
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Feeds:</strong></li>
+      </ul>
+      <ul>
+        <li><a href="https://james.walters.click/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a></li>
+      </ul>
+    </nav>
+    </aside>
 
     <div style="grid-row: 2; grid-column: span 3;">
       <hr />
