@@ -53,6 +53,37 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+    #hero {
+      align-items: center; 
+      margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 481px) { 
+      #hero {
+      display: flex; 
+    }
+
+    #hero div {
+      display: flex;
+    }
+
+    #hero img {
+      width: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) { 
+    #hero div {
+      display: block;
+      text-align: center;
+    }
+
+    #hero img {
+      width: 150px;
+      margin-top: 2em;
+    }
+  }
   </style>
   <script type="text/javascript" src="{{ SITEURL }}/theme/js/prism.js" defer></script>
 </head>
@@ -84,7 +115,7 @@
   </header>
   <main style="padding-bottom: 0;padding-top: 0;" class="container">
     {% block content_title %}
-<section style="display: grid; display: flex; align-items: center; margin-bottom: 0;">
+<section id="hero">
   {% if SITESUBTITLE %}
   <hgroup style="grid-row: 1;width: 100%; margin-bottom: 0;">
   <h1>{{ SITENAME }}</h1>
@@ -96,15 +127,15 @@
   </div>
   {% endif %}
 
-  <div style="grid-row: 1; display: flex; align-items: center; justify-content: end;">
-    <img src="https://www.gravatar.com/avatar/{{ GRAVATAR_HASH }}?s=200&d=https%3A%2F%2Fraw.githubusercontent.com%2Fiamjameswalters%2Fpiccolo%2Fmain%2Fpiccolo.png" style="width: 200px; border-radius: 50%;">
+  <div style="grid-row: 1; align-items: center; justify-content: end;">
+    <img src="https://www.gravatar.com/avatar/{{ GRAVATAR_HASH }}?s=200&d=https%3A%2F%2Fraw.githubusercontent.com%2Fiamjameswalters%2Fpiccolo%2Fmain%2Fpiccolo.png" style="border-radius: 50%;">
   </div>
 </section>
   {% endblock %}
     {% block content %}
     {% endblock %}
   </main>
-  <footer style="display: grid; padding-top: 0;" class="container">
+  <footer style="display: grid; grid-template-columns: repeat(auto-fit, [col-start] minmax(100px, 1fr) [col-end]); padding-top: 0;" class="container">
     {% if SOCIAL %}
     <aside style="grid-row: 1;">
     <nav>
