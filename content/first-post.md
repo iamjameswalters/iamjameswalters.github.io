@@ -1,6 +1,5 @@
 Title: Oh no, not another dev blog
 Date: 2022-09-13
-Category: Meta
 
 Hi there! 👋
 
