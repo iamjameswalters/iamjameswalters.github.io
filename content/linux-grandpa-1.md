@@ -43,6 +43,6 @@ It was nice! It was new! It was interesting! And it was open&mdash;a guarantee t
 
 And as for the lessons I learned? Well [Sparky](https://en.wikipedia.org/wiki/Sparky), that's a story for next time. For now, enjoy yourself a Werther's Original. 
 
-Since this is the internet, it'll have to be an ASCII Original.
+(since this is the internet, it'll have to be an ASCII Original)
 
-![ASCII Original](#)
+![ASCII Original]({static}/images/asciioriginal.png)
