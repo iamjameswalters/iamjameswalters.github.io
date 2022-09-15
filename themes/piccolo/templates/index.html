@@ -3,7 +3,7 @@
 {% block content %}
   {% for article in articles_page.object_list %}
   <article{% if articles_page.has_other_pages() and loop.index == loop.length %} style="margin-bottom: 40px;"{% endif %}>
-    <header style="display: grid;">
+    <header>
       <hgroup>
         <h2>
           <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
@@ -15,7 +15,7 @@
                on <time class="published" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>.{% if article.modified %}<br />Edited <time datetime="{{ article.modified.isoformat() }}">{{ article.locale_modified }}</time>{% endif %}</h3>
         </hgroup>
         {% if article.category or article.tags %}
-              <aside style="grid-column: 2; display: flex; align-items: end; justify-content: end; margin-bottom: 30px;">
+              <aside style="grid-column: 2; display: flex; align-items: end; margin-bottom: 30px;">
                 {% if article.category %}
                <div style="color: #73828c">Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>{% endif %}
                {% if article.tags %}
