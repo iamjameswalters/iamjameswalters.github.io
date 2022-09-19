@@ -23,7 +23,7 @@ But then, I hit [the wall](https://www.youtube.com/watch?v=wKY_Bh53YDE). You kno
 
 ### [I don't like apples](https://www.youtube.com/watch?v=IxJUN6MCnKM)
 
-It was time to turn to an alternative operating system, something that migth let me have more of a peek under the hood. So I turned to the only other operating system I had heard of&mdash;Mac OS.
+It was time to turn to an alternative operating system, something that might let me have more of a peek under the hood. So I turned to the only other operating system I had heard of&mdash;Mac OS.
 
 Now, all but immediately, I ran into a problem: I did not have a Mac, and Mac OS only comes on Macs. And being a gradeschooler, I did not have disposable income&mdash;certainly not Apple levels of disposable income&mdash;to spend on such a thing. So, I found another solution.
 
