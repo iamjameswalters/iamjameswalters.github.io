@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Pelican" />
+  <title>james.walters.click - Software Development for the Masses</title>
+  <meta name="description" content="Thoughts and lessons learned along the path of software development." />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/pico.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/prism.css" />
+  <link
+    href="https://james.walters.click/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="james.walters.click Full Atom Feed" />
+
+
+
+
+
+  <link href="https://james.walters.click/theme/css/fonts.css" rel="stylesheet" type="text/css" />
+  <style>
+    article img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #hero {
+      align-items: center; 
+      margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 481px) { 
+
+      article header {
+        display: grid;
+      }
+
+      article aside {
+        justify-content: end
+      }
+      
+      #hero {
+      display: flex; 
+    }
+
+    #hero div {
+      display: flex;
+    }
+
+    #hero img {
+      width: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) { 
+    #hero div {
+      display: block;
+      text-align: center;
+    }
+
+    #hero img {
+      width: 150px;
+      margin-top: 2em;
+    }
+  }
+  </style>
+  <script type="text/javascript" src="https://james.walters.click/theme/js/prism.js" defer></script>
+</head>
+
+<body>
+  <header class="container">
+  <nav>
+    <ul>
+      <li><a href="https://james.walters.click">All Posts</a></li>
+    </ul>
+    <ul>
+
+        <li><a href="https://james.walters.click/category/linux.html">Linux</a></li>
+        <li><a href="https://james.walters.click/category/meta.html">Meta</a></li>
+        <li><strong><a href="https://james.walters.click/category/python.html">Python</a></strong></li>
+
+    </ul>
+  </nav>
+  </header>
+  <main style="padding-bottom: 0;padding-top: 0;" class="container">
+<section id="hero">
+  <hgroup style="grid-row: 1;width: 100%; margin-bottom: 0;">
+  <h1>james.walters.click</h1>
+  <h2>Thoughts and lessons learned along the path of software development.</h2>
+  </hgroup>
+
+  <div style="grid-row: 1; align-items: center; justify-content: end;">
+    <img src="https://www.gravatar.com/avatar/04574f5e4a03ae08ef293b9adc5bc2e3?s=200&d=https%3A%2F%2Fraw.githubusercontent.com%2Fiamjameswalters%2Fpiccolo%2Fmain%2Fpiccolo.png" style="border-radius: 50%;">
+  </div>
+</section>
+<article>
+  <header>
+    <hgroup>
+    <h2>
+      <a href="https://james.walters.click/software-development-for-the-masses.html" rel="bookmark"
+         title="Permalink to Software Development for the Masses">Software Development for the Masses</a></h2>
+         <h3>By
+          <a href="https://james.walters.click/author/james-walters.html">James Walters</a>           on <time class="published" datetime="2022-09-19T00:00:00-04:00">Mon 19 September 2022</time>.</h3>
+    </hgroup>
+          <aside style="grid-column: 2; display: flex; align-items: end; margin-bottom: 30px;">
+           <div style="color: #73828c">Category: <a href="https://james.walters.click/category/python.html">Python</a>        </div>
+          </aside>
+ 
+  </header>
+
+  <p>Some years ago, I was kicking around in the <a href="https://ubuntu-mate.org/irc/">Ubuntu MATE IRC room</a>, and I asked <a href="https://wimpress.com/">Martin Wimpress</a> for his advice on getting started with programming. I've <a href="https://james.walters.click/confessions-of-a-linux-grandpa-an-oral-history-1.html">noted previously</a> my fascination with operating systems, so I was expecting that the man behind my distro of choice would refer me to a great resource on C. I was a little miffed when he instead pointed me toward Python.</p>
+<p>He told me, to my surprise and interest, that he had built the fantastic Ubuntu MATE <a href="https://ubuntu-mate.org/features/welcome/">Welcome app</a> (which is <a href="https://ubuntubudgie.org/">often imitated</a>) with Python, along with some webby stuff for the frontend. I didn't walk away from that conversation and go learn Python, but it did sow a seed in the back of my mind.</p>
+<h2>How was your weekend?</h2>
+<p>It is often quipped, "I learned Python&mdash;it was a great weekend," on account of the ease with which Python is picked up. I lived a version of that story. My team at work stewards a terrible internal web app that we've dreamed of replacing for years. But, we're not developers. We've <em>had</em> developers crop up among our ranks, but that's quite outside the scope of the job. But my manager and I came back around to this conversation late last year, and in a moment of my life where I was battling personal demons in the loneliness and dangerous boredom of working from home during the COVID-19 pandemic, I was ready to dive in when he suggested doing it ourselves with Python and Django.</p>
+<p>I bought a subscription to Codecademy Pro (I think I'd recommend <a href="https://realpython.com/">RealPython</a> today if you're looking to learn), and spent the next couple of months hammering at some Python and Django courses. By mid-January, we were ready to break ground.</p>
+<h2>Champagne 🍾 and Beer 🍺</h2>
+<p>The end of that story is that I'm a Python developer. I continue to explore and learn more about the language, and it's the thing I reach for to solve a problem. So when I started this blog, I felt the need to address, at least briefly, why I like and use Python.</p>
+<p>But lots of people are doing that, because Python's great. The internet doesn't need another article about why Python's great. So, I'm trying not to do that here. But what I'd like to do is comment on something that is sometimes (albeit not always) overlooked.</p>
+<p>I remember years ago hearing Rachel Ray (I am a cultural dinosaur, you know) talk about being offered her TV show with Food Network. She protested at first, saying "I'm not a good fit, you guys are champagne, I'm beer." But they insisted that was exactly what they liked about her.</p>
+<p>Python's kind of the beer of the programming world. I do <strong><em>not</em></strong> mean by that to say that it is unrefined&mdash;quite to the contrary, the Python community has assembled <a href="https://en.wikipedia.org/wiki/Python_(programming_language)#Design_philosophy_and_features">sophisticated standards</a> around how code should be written. What I mean is it's accessible; it has an appeal to people that are joining the programming community&mdash;or perhaps, even people who are programming <em>outside</em> of that community&mdash;which other languages do not have. Why?</p>
+<p>Because they're champagne. They're languages written by pie-in-the-sky computer scientists, used by professional programmers who have learned how to think like a programmer, and have <em>un-</em>learned how to think about programming like a regular person. The average person learning Python today isn't like me, who was happy to learn it for the joy of programming. The average Python beginner is a gradeschooler learning their first programming language, or an accountant who's sick of <a href="https://en.wikipedia.org/wiki/Visual_Basic_for_Applications">VBA</a>, or a scientist or statistician who just wants to run some quick analysis on some data and get it into a graph. These people aren't programmers by trade, and they don't care about what data type a variable is or why object-oriented programming is great or why you shouldn't manage state that way or how they could have written that <code>for</code> loop more efficiently so that it ran 1048ms faster.</p>
+<p>They just want to do something. Python, more than any other language, stays out of the way and lets them do it. It doesn't make them manage memory, it doesn't make them trip on missing semicolons, it doesn't make them read through a bunch of noisy syntax. Whatever someone's trying to do, <a href="https://peps.python.org/pep-0020/">there's at least one obvious way to do it</a>. </p>
+<h2>Vive La Révolution 🏁</h2>
+<p>I've heard <a href="https://noumenal.es/">Carlton Gibson</a> say at least once on <a href="https://djangochat.com/">Django Chat</a> that software development is currently like writing was 500 years ago: the average person would go pay a scribe to write out a letter for them, then they'd send it. But things didn't stay that way: people learned to write for themselves. Today, in the West and in many other wealthier countries, literacy rates are essentially 100%. <em>Everyone</em> can write. That doesn't mean that everyone is <em>good</em> at writing, that doesn't mean everyone <em>enjoys</em> writing, and that doesn't mean that we no longer have a need for professional writers. We have more professional writers than we've ever had. What it means, though, is that when someone needs to write a letter, he can do it himself, without having to pay a scribe to do it. When someone needs to read an important document, he can do so with his own eyes, and he can fill out a form with his own hand.</p>
+<p>We're in the <em>middle</em> of a technological revolution&mdash;it isn't over yet. Yes, everyone (again, at least in the West and other wealthier places) has a smartphone in their pocket, or a laptop in their backpack, or at least a computer down at the library that they can use each day. But not everyone can program&mdash;not everyone has fluency in the language of the machines they use.</p>
+<p><a href="https://alsweigart.com/">Al Sweigart</a> said something once that struck me as quite profound: people are limited by using software other people wrote. There are two kinds of people: those who look at a computer and say, "Wow, what an advanced machine, full of all this powerful software!" and those who say, "I can make this machine do <em>anything.</em>" The former are users; the latter, programmers. And Python is the most effective language yet at making users into programmers.</p>
+
+  </article>
+  </main>
+  <footer style="display: grid; grid-template-columns: repeat(auto-fit, [col-start] minmax(100px, 1fr) [col-end]); padding-top: 0;" class="container">
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Social:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="http://github.com/iamjameswalters">Github</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Feeds:</strong></li>
+      </ul>
+      <ul>
+        <li><a href="https://james.walters.click/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <div style="grid-row: 2; grid-column: span 3;">
+      <hr />
+      <p style="padding-top: 0.5em;">
+      Built using the <a href="https://github.com/iamjameswalters/piccolo">Piccolo</a> theme, based on <a href="https://picocss.com/">Pico.css</a>.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
