@@ -46,3 +46,7 @@ And as for the lessons I learned? Well [Sparky](https://en.wikipedia.org/wiki/Sp
 (since this is the internet, it'll have to be an ASCII Original)
 
 ![ASCII Original]({static}/images/asciioriginal.png)
+
+<footer style="text-align: center;font-weight: bold;">
+<a href="{tag}Linux Grandpa">Tell me another story</a>, Grandpa!
+</footer>

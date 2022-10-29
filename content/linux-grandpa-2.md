@@ -39,7 +39,7 @@ They don't have the OS badges anymore, but System76 will [still send you sticker
 
 I also went as far as to register this laptop on some list of registered Linux machines I found out there on the web. The home page would list how many registered Linux computers they were tracking. Of course, this was hardly scientific, it was entirely opt-in and who knows who had actually heard of it? I had discovered it through a badge in someone's forum signature containing their "ID number".
 
-Alas, I'm afraid the name and URL of this site have long passed from Linux Grandpa's memory.
+Alas, I'm afraid the name and URL of this site have long ago passed from Linux Grandpa's memory.
 
 ## On the Perils of Dual Booting
 
