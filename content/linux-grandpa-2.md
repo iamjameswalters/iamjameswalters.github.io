@@ -9,7 +9,7 @@ Now, where did we leave off? Oh yes! I was running Ubuntu on the old Toshiba...
 
 ## Grandpa, what was Ubuntu like?
 
-![Gutsy Gibbon]({static}/images/ubuntu7-10-gutsy.png)
+![Gutsy Gibbon]({static}/images/ubuntu-7-10-gutsy.png)
 
 This was Ubuntu, at the end of 2007. It was just then three years old. 
 
