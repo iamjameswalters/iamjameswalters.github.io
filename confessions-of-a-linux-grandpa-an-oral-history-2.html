@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Pelican" />
+  <title>james.walters.click - Confessions of a Linux Grandpa: An Oral History #2</title>
+  <meta name="description" content="Thoughts and lessons learned along the path of software development." />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/pico.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/prism.css" />
+
+
+
+
+    <meta name="tags" content="Linux Grandpa" />
+    <meta name="tags" content="oral histories" />
+
+  <link href="https://james.walters.click/theme/css/fonts.css" rel="stylesheet" type="text/css" />
+  <style>
+    article img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #hero {
+      align-items: center; 
+      margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 481px) { 
+
+      article header {
+        display: grid;
+      }
+
+      article aside {
+        justify-content: end
+      }
+      
+      #hero {
+      display: flex; 
+    }
+
+    #hero div {
+      display: flex;
+    }
+
+    #hero img {
+      width: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) { 
+    #hero div {
+      display: block;
+      text-align: center;
+    }
+
+    #hero img {
+      width: 150px;
+      margin-top: 2em;
+    }
+  }
+  </style>
+  <script type="text/javascript" src="https://james.walters.click/theme/js/prism.js" defer></script>
+</head>
+
+<body>
+  <header class="container">
+  <nav>
+    <ul>
+      <li><a href="https://james.walters.click">All Posts</a></li>
+    </ul>
+    <ul>
+
+        <li><strong><a href="https://james.walters.click/category/linux.html">Linux</a></strong></li>
+        <li><a href="https://james.walters.click/category/meta.html">Meta</a></li>
+        <li><a href="https://james.walters.click/category/python.html">Python</a></li>
+
+    </ul>
+  </nav>
+  </header>
+  <main style="padding-bottom: 0;padding-top: 0;" class="container">
+<section id="hero">
+  <hgroup style="grid-row: 1;width: 100%; margin-bottom: 0;">
+  <h1><a href="https://james.walters.click" style="color: #fff; text-decoration: none;">james.walters.click</a></h1>
+  <h2>Thoughts and lessons learned along the path of software development.</h2>
+  </hgroup>
+
+  <div style="grid-row: 1; align-items: center; justify-content: end;">
+    <img src="https://www.gravatar.com/avatar/04574f5e4a03ae08ef293b9adc5bc2e3?s=200&d=https%3A%2F%2Fraw.githubusercontent.com%2Fiamjameswalters%2Fpiccolo%2Fmain%2Fpiccolo.png" style="border-radius: 50%;">
+  </div>
+</section>
+<article>
+  <header>
+    <hgroup>
+    <h2>
+      <a href="https://james.walters.click/confessions-of-a-linux-grandpa-an-oral-history-2.html" rel="bookmark"
+         title="Permalink to Confessions of a Linux Grandpa: An Oral History #2">Confessions of a Linux Grandpa: An Oral History #2</a></h2>
+         <h3>By
+          <a href="https://james.walters.click/author/james-walters.html">James Walters</a>           on <time class="published" datetime="2022-09-25T00:00:00-04:00">Sun 25 September 2022</time>.</h3>
+    </hgroup>
+          <aside style="grid-column: 2; display: flex; align-items: end; margin-bottom: 30px;">
+           <div style="color: #73828c">Category: <a href="https://james.walters.click/category/linux.html">Linux</a>          <br />Tags: 
+            <a href="https://james.walters.click/tag/linux-grandpa.html">Linux Grandpa</a>,             <a href="https://james.walters.click/tag/oral-histories.html">oral histories</a>        </div>
+          </aside>
+ 
+  </header>
+
+  <p>Hello again Sparky! Have you come for another story about the glory days of desktop Linux? Well who am I to disappoint? 👴️</p>
+<p>Now, where did we leave off? Oh yes! I was running Ubuntu on the old Toshiba...</p>
+<h2>Grandpa, what was Ubuntu like?</h2>
+<p><img alt="Gutsy Gibbon" src="https://james.walters.click/images/ubuntu7-10-gutsy.png"></p>
+<p>This was Ubuntu, at the end of 2007. It was just then three years old. </p>
+<p>It was <a href="https://en.wikipedia.org/wiki/Ubuntu_version_history#Ubuntu_7.10_(Gutsy_Gibbon)">Gutsy</a>. It was <a href="https://en.wikipedia.org/wiki/Ubuntu_philosophy">human</a>. It was <span style="color: orange">orange</span>. </p>
+<p>And, it made <a href="https://www.youtube.com/watch?v=NL3c4l6G6pM">this sound</a> when you logged in.</p>
+<p>What you're looking at there in terms of the desktop is <a href="https://en.wikipedia.org/wiki/GNOME#GNOME_2">GNOME 2</a>. It offered split panels, one at the top for application menus and launchers (as well as task bar applets), and one on the bottom for window management and virtual desktops. </p>
+<p>Ah, how I <em>love</em> those menus&mdash;instead of cramming everything into one Start menu on Windows, here I had three distinct menus: one for applications, one for locations and folders on disk, and one for settings. 😙️🤌️</p>
+<p>It came with Firefox 2, by the way.</p>
+<p>I mentioned previously that my wireless card didn't work on this release: in order to get it working, I had to download the Windows driver from Realtek and install it with <a href="https://en.wikipedia.org/wiki/NDISwrapper"><code>ndis-wrapper</code></a>. This was a common problem in those days, it would be a few years before the wifi situation improved on Linux. As for this laptop, a driver would make its way into the kernel in the very next release&mdash;it worked out of the box in 8.04 Hardy Heron.</p>
+<p>Speaking of installing stuff, there was no "app store" like there is these days, Ubuntu Software Centre [sic] or GNOME Software or whatever. Back then, you had <a href="https://en.wikipedia.org/wiki/Synaptic_(software)">Synaptic Package Manager</a>, which was itself rather new still. It is, essentially, a graphical browser of the packages in the repositories you were configured to use. I still install it on my machines today&mdash;it's quite handy to have around when you need to look at what's inside a metapackage or don't want to have to reach for <code>apt</code>.</p>
+<h2>We called it "bling" 🥇️</h2>
+<p>As a devoted Linux user, I was eager to brandish that identity however I could. You might know of a little computer company in Denver called System76. They've certainly come along way over the last 15 years or so. Back in the day, they would <a href="https://web.archive.org/web/20080430063103/http://system76.com/article_info.php?articles_id=9">send you some free stickers</a> if you sent in a self-addressed envelope. They were a parody of the OS badges that computers came with that said "Powered by Windows XP" and the like. Here's what they looked like: </p>
+<p><img alt="Powered by Ubuntu" src="https://james.walters.click/images/powered-by-ubuntu.png"></p>
+<p>When I sent for mine, I received not only the OS badges, but also some Ubuntu logos for overlaying the <span style="text-decoration: line-through">Windows key</span> <a href="https://en.wikipedia.org/wiki/Super_key_(keyboard_button)">super key</a>. 😙️🤌️</p>
+<p>They don't have the OS badges anymore, but System76 will <a href="https://system76.com/merch/stickers">still send you stickers today</a>.</p>
+<p>I also went as far as to register this laptop on some list of registered Linux machines I found out there on the web. The home page would list how many registered Linux computers they were tracking. Of course, this was hardly scientific, it was entirely opt-in and who knows who had actually heard of it? I had discovered it through a badge in someone's forum signature containing their "ID number".</p>
+<p>Alas, I'm afraid the name and URL of this site have long passed from Linux Grandpa's memory.</p>
+<h2>On the Perils of Dual Booting</h2>
+<p>I'll close by sharing an early blunder, perhaps my first with Linux.</p>
+<p>After installing this and playing around with it for a bit, I decided that I wanted to go back to Windows (this laptop came with Vista). This was only my first foray into Linux, and while I enjoyed it, I was ready to return to the safety of home.</p>
+<p>I hadn't <a href="https://en.wikipedia.org/wiki/Disk_formatting#REFORMAT">nuked and paved</a> Windows; instead, I installed Ubuntu in a <a href="https://en.wikipedia.org/wiki/Multi-booting#Microsoft_Windows_and_Linux">dual boot</a> setup. This meant that I split the disk into two partitions: one had Windows, the other Ubuntu. Going back to normal should be as simple as wiping out the Ubuntu side.</p>
+<p>So, that's exactly what I did. And after completing that operation, I rebooted and...the computer couldn't boot.</p>
+<p>The problem? The <a href="https://en.wikipedia.org/wiki/Master_boot_record">master boot record</a> (MBR) was pointing to something that didn't exist.</p>
+<p>The master boot record was a little (512 bytes) sector that told the computer where to boot from. As computers (and kernels) grew to become larger and more complex, the MBR would just point to a bootloader, which would take care of the rest.</p>
+<p>Originally, Windows had made the MBR point to its own bootloader. When I installed Ubuntu, it had to rewrite the MBR to point to <a href="https://en.wikipedia.org/wiki/GNU_GRUB"><code>GRUB</code></a>, which would offer boot options for both Ubuntu and Windows.</p>
+<p>Well, when I wiped out my Ubuntu partition, I also wiped out GRUB, which meant that the MBR was pointing to something that didn't exist.</p>
+<p>Fortunately, with a little Googling, this wasn't <em>too</em> difficult to fix: I reached for my trusty Windows install disc, and booted into the recovery utility. From there, I accessed some sort of recovery shell that let me run some command incantation involving a <code>/fixmbr</code> flag or something, and it repaired the MBR.</p>
+<p>Of course, this was all long enough ago that computers still used MBRs&mdash;do we still use them on <a href="https://en.wikipedia.org/wiki/UEFI#Disk_device_compatibility">UEFI</a> machines? ¯\_(ツ)_/¯</p>
+<p>At any rate, this was the first (not the last!) time I got myself out of a Linux pickle. At this early stage, it's a good thing I managed it&mdash;if I'd had to go groveling to my dad and have him fix my computer, he surely would have discouraged me from any further experiments.</p>
+<p>That's all for this time, Sparky! As a reward for your attention, enjoy yourself another ASCII Original.</p>
+<p><img alt="ASCII Original" src="https://james.walters.click/images/asciioriginal.png"></p>
+<footer style="text-align: center;font-weight: bold;">
+Wait, I'm lost&mdash;<a href="https://james.walters.click/tag/linux-grandpa.html">start from the beginning</a>!
+</footer>
+
+  </article>
+  </main>
+  <footer style="display: grid; grid-template-columns: repeat(auto-fit, [col-start] minmax(100px, 1fr) [col-end]); padding-top: 0;" class="container">
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Social:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="http://github.com/iamjameswalters">Github</a></li>
+      </ul>
+    </nav>
+    </aside>
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Links:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="https://grugbrain.dev/">The Grug Brained Developer</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+
+    <div style="grid-row: 2; grid-column: span 3;">
+      <hr />
+      <p style="padding-top: 0.5em;">
+      Built using the <a href="https://github.com/iamjameswalters/piccolo">Piccolo</a> theme, based on <a href="https://picocss.com/">Pico.css</a>.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
