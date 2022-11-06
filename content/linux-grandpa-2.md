@@ -1,5 +1,5 @@
 Title: Confessions of a Linux Grandpa: An Oral History #2
-Date: 2022-09-25
+Date: 2022-10-28
 Category: Linux
 Tags: Linux Grandpa, oral histories
 
