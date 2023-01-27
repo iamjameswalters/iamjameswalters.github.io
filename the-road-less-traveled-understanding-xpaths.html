@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Pelican" />
+  <title>james.walters.click - The Road Less Traveled: Understanding XPaths</title>
+  <meta name="description" content="Thoughts and lessons learned along the path of software development." />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/pico.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/prism.css" />
+  <link
+    href="https://james.walters.click/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="james.walters.click Full Atom Feed" />
+
+
+
+
+    <meta name="tags" content="Selenium" />
+    <meta name="tags" content="XPaths" />
+    <meta name="tags" content="Web Scraping" />
+    <meta name="tags" content="HTML" />
+    <meta name="tags" content="XML" />
+
+  <link href="https://james.walters.click/theme/css/fonts.css" rel="stylesheet" type="text/css" />
+  <style>
+    article img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #hero {
+      align-items: center; 
+      margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 481px) { 
+
+      article header {
+        display: grid;
+      }
+
+      article aside {
+        justify-content: end
+      }
+      
+      #hero {
+      display: flex; 
+    }
+
+    #hero div {
+      display: flex;
+    }
+
+    #hero img {
+      width: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) { 
+    #hero div {
+      display: block;
+      text-align: center;
+    }
+
+    #hero img {
+      width: 150px;
+      margin-top: 2em;
+    }
+  }
+  </style>
+  <script type="text/javascript" src="https://james.walters.click/theme/js/prism.js" defer></script>
+</head>
+
+<body>
+  <header class="container">
+  <nav>
+    <ul>
+      <li><a href="https://james.walters.click">All Posts</a></li>
+    </ul>
+    <ul>
+
+        <li><a href="https://james.walters.click/category/linux.html">Linux</a></li>
+        <li><a href="https://james.walters.click/category/meta.html">Meta</a></li>
+        <li><a href="https://james.walters.click/category/python.html">Python</a></li>
+        <li><strong><a href="https://james.walters.click/category/web.html">Web</a></strong></li>
+
+    </ul>
+  </nav>
+  </header>
+  <main style="padding-bottom: 0;padding-top: 0;" class="container">
+<section id="hero">
+  <hgroup style="grid-row: 1;width: 100%; margin-bottom: 0;">
+  <h1><a href="https://james.walters.click">james.walters.click</a></h1>
+  <h2>Thoughts and lessons learned along the path of software development.</h2>
+  </hgroup>
+
+  <div style="grid-row: 1; align-items: center; justify-content: end;">
+    <img src="https://www.gravatar.com/avatar/04574f5e4a03ae08ef293b9adc5bc2e3?s=200&d=https%3A%2F%2Fraw.githubusercontent.com%2Fiamjameswalters%2Fpiccolo%2Fmain%2Fpiccolo.png" style="border-radius: 50%;">
+  </div>
+</section>
+<article>
+  <header>
+    <hgroup>
+    <h2>
+      <a href="https://james.walters.click/the-road-less-traveled-understanding-xpaths.html" rel="bookmark"
+         title="Permalink to The Road Less Traveled: Understanding XPaths">The Road Less Traveled: Understanding XPaths</a></h2>
+         <h3>By
+          <a href="https://james.walters.click/author/james-walters.html">James Walters</a>           on <time class="published" datetime="2023-01-26T00:00:00-05:00">Thu 26 January 2023</time>.</h3>
+    </hgroup>
+          <aside style="grid-column: 2; display: flex; align-items: end; margin-bottom: 30px;">
+           <div style="color: #73828c">Category: <a href="https://james.walters.click/category/web.html">Web</a>          <br />Tags: 
+            <a href="https://james.walters.click/tag/selenium.html">Selenium</a>,             <a href="https://james.walters.click/tag/xpaths.html">XPaths</a>,             <a href="https://james.walters.click/tag/web-scraping.html">Web Scraping</a>,             <a href="https://james.walters.click/tag/html.html">HTML</a>,             <a href="https://james.walters.click/tag/xml.html">XML</a>        </div>
+          </aside>
+ 
+  </header>
+
+  <p>The other day I started writing a web automation tool to do some chores for me at work. This was my first time using <a href="https://www.selenium.dev/">Selenium</a>, a handy dandy library for driving web browsers in code.</p>
+<p>When it comes to getting a hold of elements in the page you want to interact with, Selenium offers the usual ID and class-based CSS selectors. Since I was trying to navigate a page written in React though, most of that information was <a href="https://www.reddit.com/r/webdev/comments/lucdnp/why_are_class_names_like_this_in_facebook_and/">randomly generated</a>. I needed to get at elements by grabbing onto an easily accessible anchor, then using it as a reference point from which to step through the document tree and get at what I was looking for. Since it's 2023, I of course expected to use some facsimile to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Javascript DOM API</a>. A <code>.parentElement</code> here, a <code>.firstChild</code> there, and I'd be able to grab that pesky button nested within three generic <code>&lt;div&gt;</code>s and click it. <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a> works this way, why wouldn't Selenium?</p>
+<p>It turns out that, no, Selenium does <em>not</em> work this way. For whatever reason, instead of something resembling the DOM API, Selenium uses <a href="https://en.wikipedia.org/wiki/XPath">XPaths</a>. When I first started trying to write these things, they struck me as a bit ersatz, landing somewhere along the spectrum between filepaths and regular expressions. But I have to say, they've grown on me a bit, mostly because they're far and away the best tool Selenium gives you for finding elements on the page. </p>
+<h2>Happy Little (Document) Trees 🌳️</h2>
+<p>XPaths (the XML Path Language) are based around the idea of seeing the HTML document as a tree of nodes. Let's take the following HTML for our examples:</p>
+<pre><code class="language-markup">
+<script type="prism-html-markup"> 
+<html>
+  <body>
+    <h1>Hello World!</h1>
+    <p>
+      I'd like to welcome you all to this web page. Check out my stuff!
+    </p>
+    <p id="label">Things I like:</p>
+    <ul>
+      <li>Cats</li>
+      <li>Video games</li>
+      <li>Pizza</li>
+    </ul>
+    <button>
+      <span style="font-weight: bold;">Enjoy this page?</span> Let me know!
+    </button>
+  </body>
+</html>
+</script></code></pre>
+
+<p>If we wanted to write an XPath to target the header at the top of the page, we might write something like this:</p>
+<div class="highlight"><pre><span></span><code>/html/body/h1
+</code></pre></div>
+
+<p>Let's break that down. The opening slash <code>/</code> means the root of the document, the beginning of everything. This is very similar to the root <code>/</code> in <a href="https://en.wikipedia.org/wiki/Root_directory">UNIX filepaths</a>. There's only one element in the root of our document: <code>&lt;html&gt;</code>. So, that's what we type next. Then, within the <code>&lt;html&gt;</code> tag, we select the <code>&lt;body&gt;</code> tag, and then the <code>&lt;h1&gt;</code> within it. Because this XPath starts at the root of our document and walks through nodes in the tree to get to the one we want, it's kind of like an absolute filepath.</p>
+<p>Pretty straightforward. But, here's another way we could get at that header:</p>
+<div class="highlight"><pre><span></span><code>//h1
+</code></pre></div>
+
+<p>What's going on here? Whereas the single slash <code>/</code> means that what comes after it must be immediately within the node that comes before the slash, the double slash <code>//</code> means that it should be <em>somewhere</em> inside it. It allows us to find things that are nested a few layers in. So in this case, we're looking for an <code>&lt;h1&gt;</code> that's somewhere within the root of the document.</p>
+<p>Here's another example of this in action:</p>
+<div class="highlight"><pre><span></span><code>/html/body//span
+</code></pre></div>
+
+<p>This XPath says that in the root of our document there should be a <code>&lt;html&gt;</code> node, and within that a <code>&lt;body&gt;</code> node. Then, <em>anywhere</em> within <code>&lt;body&gt;</code>, we want a <code>&lt;span&gt;</code>. This would select the <code>&lt;span&gt;</code> from our example, even though it's inside a <code>&lt;button&gt;</code>.</p>
+<p>So far our XPaths have only matched one node in our document. But what do we do if we want to select a specific item from a handful of nodes that match our XPath? Let's look at our next example:</p>
+<div class="highlight"><pre><span></span><code>/html/body/ul/li
+</code></pre></div>
+
+<p>You probably guessed that this XPath selects an <code>&lt;li&gt;</code> node in our unordered list. But which one? That XPath matches all three list items (and left this way, would return them all). </p>
+<p>We can use an index to get at a specific node matching the XPath. If we want to select "Video Games", we can modify our XPath this way:</p>
+<div class="highlight"><pre><span></span><code>/html/body/ul/li[2]
+</code></pre></div>
+
+<p>Note that XPath indexes are <strong>not</strong> like Python indexes&mdash;they start at <code>1</code>, not <code>0</code>.</p>
+<h2>Predicate Predicaments 🤔️</h2>
+<p>Those brackets <code>[]</code> in the last example constitute a predicate clause. They allow you to specify something that should be true about the element your selecting. In this case, we were specifying that the <code>&lt;li&gt;</code> we select should be the second child of the <code>&lt;ul&gt;</code>. </p>
+<p>There are other predicates available for us. For instance, we can predicate based on an element's property:</p>
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">body</span><span class="o">/</span><span class="n">p</span><span class="o">[</span><span class="n">@id=&#39;label&#39;</span><span class="o">]</span><span class="w"></span>
+</code></pre></div>
+
+<p>This XPath selects a <code>&lt;p&gt;</code> node that has an <code>id</code> property with a value of <code>label</code>. </p>
+<p>You might also be wondering, is it possible to select the value of the <code>id</code> itself? Why yes, you can!</p>
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">body</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="nv">@id</span><span class="w"></span>
+</code></pre></div>
+
+<p>This XPath would select the value of the <code>id</code>&mdash;that is, it would return the string <code>label</code>.</p>
+<p>A particularly helpful predicate we can use is checking an element's text with the <code>text()</code> function. For example, if we wanted to select the list item that says "Cats", we could do so like this:</p>
+<div class="highlight"><pre><span></span><code>//li[text()=&#39;Cats&#39;]
+</code></pre></div>
+
+<p>Note that this will only work for an <em>exact</em> match. The entire text must be "Cats". If you want to check if an element's text <em>contains</em> something, well, you'll need the <code>contains()</code> function:</p>
+<div class="highlight"><pre><span></span><code>/html//p[contains(text(), &#39;like&#39;)]
+</code></pre></div>
+
+<p>The <code>contains()</code> function takes two positional arguments: the first for the thing to check, and the second for the value to look for. In this expression, we're looking for a <code>&lt;p&gt;</code> element whose text contains <code>like</code>. Since both <code>&lt;p&gt;</code> tags in our example have the word 'like' in them, they both get selected. </p>
+<p>Predicates can also be chained. If we wanted to narrow down our selection to the <code>&lt;p&gt;</code> with <code>id="label"</code>, we can add that predicate:</p>
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="n">html</span><span class="o">//</span><span class="n">p</span><span class="o">[</span><span class="n">contains(text(), &#39;like&#39;)</span><span class="o">][</span><span class="n">@id=&#39;label&#39;</span><span class="o">]</span><span class="w"></span>
+</code></pre></div>
+
+<!--
+Actually, there's another issue lurking here, one that gave me quite a headache.
+
+If we wanted to try and select our button based on it containing the phrase "Let me know!", we might try this:
+
+
+<div class="highlight"><pre><span></span><code>//button[contains(text(), &#39;Let me know!)]
+</code></pre></div>
+
+
+
+But this won't work. How come?
+
+After some spelunking, I came across a [Stack Overflow answer](https://stackoverflow.com/questions/3655549/xpath-containstext-some-string-doesnt-work-when-used-with-node-with-more) (of course) that explained it. I'll leave the details of that answer to you, but to sum it up, because the button contains not just text but a `<span>` element as well, `text()` returns a *list* of nodes. We then want to check *each* of those nodes (one of which is the "Let me know!" text) for a match of our string. In order to do that, we need something like this:
+
+
+-->
+
+<h2>Additional Resources 📚️</h2>
+<p>We've only scratched the surface of XPath syntax. If you're looking for a deeper dive, I found the cheat sheet at <a href="https://devhints.io/xpath">devhints.io</a> incredibly helpful. Not only does it get into a wide variety of XPath syntax, but it also offers some translation between query paradigms you might be more familiar with, such as CSS selectors or JQuery. It has some helpful notes about a few gotchas in there&mdash;think you know how to write an XPath querying an element's class? <a href="https://devhints.io/xpath#class-check">Think again!</a></p>
+<p>Finally, I think that the single best tool for wrangling with XPaths is hidden within your browser's devtools. I've yet to check Firefox, but using Chromium-based browsers like Brave and Edge, I learned that you can inspect an element, right-click on it in the code view, and under the "Copy" option, you can copy an XPath for that element. This can help a lot if you're trying to figure out how to write an XPath for something in Selenium! </p>
+<p><img alt="Right-click to copy an element's XPath" src="https://james.walters.click/images/xpath1.png"></p>
+<p>Also, using Ctrl-F in that inspector will let you test out XPaths and see which elements on the page satisfy it&mdash;just write your XPath in the Ctrl-F dialog and massage it until it selects what you're looking for.</p>
+<p><img alt="Type XPath expressions right into Ctrl-F to test" src="https://james.walters.click/images/xpath2.png"></p>
+<p>So there you go, a whole different way to navigate HTML documents that was hiding right under our noses. The XPath road may be less traveled that the DOM highway, but I think I might be taking it a little more often from now on.</p>
+
+  </article>
+  </main>
+  <footer style="display: grid; grid-template-columns: repeat(auto-fit, [col-start] minmax(100px, 1fr) [col-end]); padding-top: 0;" class="container">
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Social:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="http://github.com/iamjameswalters">Github</a></li>
+      </ul>
+    </nav>
+    </aside>
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Links:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="https://grugbrain.dev/">The Grug Brained Developer</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Feeds:</strong></li>
+      </ul>
+      <ul>
+        <li><a href="https://james.walters.click/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <div style="grid-row: 2; grid-column: span 3;">
+      <hr />
+      <p style="padding-top: 0.5em;">
+      Built using the <a href="https://github.com/iamjameswalters/piccolo">Piccolo</a> theme, based on <a href="https://picocss.com/">Pico.css</a>.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
