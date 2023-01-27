@@ -1,12 +1,12 @@
 Title: The Road Less Traveled: Understanding XPaths
 Date: 2023-01-26
-Category: Web, Python
-Tags: Selenium, XPaths, web scraping
-Status: draft
+Category: Web
+Tags: Selenium, XPaths, Web Scraping, HTML, XML
+Status: published
 
 The other day I started writing a web automation tool to do some chores for me at work. This was my first time using [Selenium](https://www.selenium.dev/), a handy dandy library for driving web browsers in code.
 
-When it comes to getting a hold of elements in the page you want to interact with, Selenium offers the usual ID and class-based CSS selectors. Since I was trying to navigate a page written in React though, most of that information was [randomly generated](https://www.reddit.com/r/webdev/comments/lucdnp/why_are_class_names_like_this_in_facebook_and/). I needed to get at elements by grabbing onto an easily accessible anchor, then using it as a reference point from which to step through the document tree and get at what I was looking for. Since it's 2023, I of course expected to use some facsimile to the [Javascrip DOM API](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction). A `.parentElement` here, a `.firstChild` there, and I'd be able to grab that pesky button nested within three generic `<div>`s and click it. [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) works this way, why wouldn't Selenium?
+When it comes to getting a hold of elements in the page you want to interact with, Selenium offers the usual ID and class-based CSS selectors. Since I was trying to navigate a page written in React though, most of that information was [randomly generated](https://www.reddit.com/r/webdev/comments/lucdnp/why_are_class_names_like_this_in_facebook_and/). I needed to get at elements by grabbing onto an easily accessible anchor, then using it as a reference point from which to step through the document tree and get at what I was looking for. Since it's 2023, I of course expected to use some facsimile to the [Javascript DOM API](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction). A `.parentElement` here, a `.firstChild` there, and I'd be able to grab that pesky button nested within three generic `<div>`s and click it. [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) works this way, why wouldn't Selenium?
 
 It turns out that, no, Selenium does *not* work this way. For whatever reason, instead of something resembling the DOM API, Selenium uses [XPaths](https://en.wikipedia.org/wiki/XPath). When I first started trying to write these things, they struck me as a bit ersatz, landing somewhere along the spectrum between filepaths and regular expressions. But I have to say, they've grown on me a bit, mostly because they're far and away the best tool Selenium gives you for finding elements on the page. 
 
@@ -14,7 +14,8 @@ It turns out that, no, Selenium does *not* work this way. For whatever reason, i
 
 XPaths (the XML Path Language) are based around the idea of seeing the HTML document as a tree of nodes. Let's take the following HTML for our examples:
 
-```html
+<pre><code class="language-markup">
+<script type="prism-html-markup"> 
 <html>
   <body>
     <h1>Hello World!</h1>
@@ -32,7 +33,7 @@ XPaths (the XML Path Language) are based around the idea of seeing the HTML docu
     </button>
   </body>
 </html>
-```
+</script></code></pre> 
 
 If we wanted to write an XPath to target the header at the top of the page, we might write something like this:
 
@@ -72,7 +73,7 @@ We can use an index to get at a specific node matching the XPath. If we want to 
 /html/body/ul/li[2]
 ```
 
-> Note that XPath indexes are **not** like Python indexes&mdash;they start at `1`, not `0`.
+Note that XPath indexes are **not** like Python indexes&mdash;they start at `1`, not `0`.
 
 ## Predicate Predicaments 🤔️
 
@@ -106,7 +107,7 @@ Note that this will only work for an *exact* match. The entire text must be "Cat
 /html//p[contains(text(), 'like')]
 ```
 
-The `contains()` function takes two arguments: one for the thing to check, and one for the value to look for. In this expression, we're looking for a `<p>` element whose text contains `like`. Since both `<p>` tags in our example have the word 'like' in them, they both get selected. 
+The `contains()` function takes two positional arguments: the first for the thing to check, and the second for the value to look for. In this expression, we're looking for a `<p>` element whose text contains `like`. Since both `<p>` tags in our example have the word 'like' in them, they both get selected. 
 
 Predicates can also be chained. If we wanted to narrow down our selection to the `<p>` with `id="label"`, we can add that predicate:
 
@@ -133,6 +134,12 @@ After some spelunking, I came across a [Stack Overflow answer](https://stackover
 
 We've only scratched the surface of XPath syntax. If you're looking for a deeper dive, I found the cheat sheet at [devhints.io](https://devhints.io/xpath) incredibly helpful. Not only does it get into a wide variety of XPath syntax, but it also offers some translation between query paradigms you might be more familiar with, such as CSS selectors or JQuery. It has some helpful notes about a few gotchas in there&mdash;think you know how to write an XPath querying an element's class? [Think again!](https://devhints.io/xpath#class-check)
 
-Finally, I think that the single best tool for wrangling with XPaths is hidden within your browser's devtools. I've yet to check Firefox, but using Chromium-based browsers like Brave and Edge, I learned that you can inspect an element, right-click on it in the code view, and under the "Copy" option, you can copy an XPath for that element. This can help a lot if you're trying to figure out how to write an XPath for something in Selenium! Also, using Ctrl-F in that inspector will let you test out XPaths and see which elements on the page satisfy it&mdash;just write your XPath in the Ctrl-F dialog and massage it until it selects what you're looking for.
+Finally, I think that the single best tool for wrangling with XPaths is hidden within your browser's devtools. I've yet to check Firefox, but using Chromium-based browsers like Brave and Edge, I learned that you can inspect an element, right-click on it in the code view, and under the "Copy" option, you can copy an XPath for that element. This can help a lot if you're trying to figure out how to write an XPath for something in Selenium! 
+
+![Right-click to copy an element's XPath]({static}/images/xpath1.png)
+
+Also, using Ctrl-F in that inspector will let you test out XPaths and see which elements on the page satisfy it&mdash;just write your XPath in the Ctrl-F dialog and massage it until it selects what you're looking for.
+
+![Type XPath expressions right into Ctrl-F to test]({static}/images/xpath2.png)
 
 So there you go, a whole different way to navigate HTML documents that was hiding right under our noses. The XPath road may be less traveled that the DOM highway, but I think I might be taking it a little more often from now on.
