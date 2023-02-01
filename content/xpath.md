@@ -143,3 +143,7 @@ Also, using Ctrl-F in that inspector will let you test out XPaths and see which 
 ![Type XPath expressions right into Ctrl-F to test]({static}/images/xpath2.png)
 
 So there you go, a whole different way to navigate HTML documents that was hiding right under our noses. The XPath road may be less traveled than the DOM highway, but I think I might be taking it a little more often from now on.
+
+<footer style="font-weight: bold; text-align: center;">
+Found this helpful? <a href="https://ko-fi.com/iamjameswalters">Buy me a coffee!</a> ☕️
+</footer>

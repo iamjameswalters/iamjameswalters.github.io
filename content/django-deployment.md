@@ -143,3 +143,7 @@ Eric Matthes has a wonderful project going called [django-simple-deploy](https:/
 There's a lot of other things we could talk about. Should you containerize your app with Docker? Should you deploy with a serverless function? Which database is the best database? These are all good next steps to consider. 
 
 At bare minimum, I hope I've shown that these four major concerns (static files, database, WSGI server, and web server) are the places to begin when figuring out how to deploy your Django application. If you can get your head wrapped around these things, you'll be able to get your app online and make it to "Hello World". The rest are details that you'll pick up as you continue to develop and get comfortable putting your work online.
+
+<footer style="font-weight: bold; text-align: center;">
+Found this helpful? <a href="https://ko-fi.com/iamjameswalters">Buy me a coffee!</a> ☕️
+</footer>
