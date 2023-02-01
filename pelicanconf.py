@@ -23,11 +23,11 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('The Grug Brained Developer', 'https://grugbrain.dev/'),)
+LINKS = (('The Grug Brained Developer', 'https://grugbrain.dev/'),("Adam Johnson's Blog", 'https://adamj.eu/tech'),)
 
 
 # Social widget
-SOCIAL = (('Github', 'http://github.com/iamjameswalters'),)
+SOCIAL = (('Github', 'http://github.com/iamjameswalters'),('By me a coffee (Ko-Fi)', 'https://ko-fi.com/iamjameswalters'),)
 
 DEFAULT_PAGINATION = 8
 
