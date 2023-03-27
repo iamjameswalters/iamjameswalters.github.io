@@ -27,7 +27,7 @@ LINKS = (('The Grug Brained Developer', 'https://grugbrain.dev/'),("Adam Johnson
 
 
 # Social widget
-SOCIAL = (('Github', 'http://github.com/iamjameswalters'),('Mastodon', 'https://social.librem.one/@iamjameswalters'),('By me a coffee (Ko-Fi)', 'https://ko-fi.com/iamjameswalters'), ("iamjameswalters@gmail.com", "mailto:iamjameswalters@gmail.com"))
+SOCIAL = (('Github', 'http://github.com/iamjameswalters'),('Mastodon', 'https://fosstodon.org/@jameswalters'),('By me a coffee (Ko-Fi)', 'https://ko-fi.com/iamjameswalters'), ("iamjameswalters@gmail.com", "mailto:iamjameswalters@gmail.com"))
 
 DEFAULT_PAGINATION = 8
 
