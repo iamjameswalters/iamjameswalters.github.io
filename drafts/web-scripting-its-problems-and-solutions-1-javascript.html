@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Pelican" />
+  <title>james.walters.click - Web Scripting: Its Problems and Solutions #1 - Javascript</title>
+  <meta name="description" content="Thoughts and lessons learned along the path of software development." />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/pico.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/prism.css" />
+  <link
+    href="https://james.walters.click/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="james.walters.click Full Atom Feed" />
+
+
+
+
+    <meta name="tags" content="web scripting" />
+    <meta name="tags" content="Javascript" />
+    <meta name="tags" content="JQuery" />
+
+  <link href="https://james.walters.click/theme/css/fonts.css" rel="stylesheet" type="text/css" />
+  <style>
+    article img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #hero {
+      align-items: center; 
+      margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 481px) { 
+
+      article header {
+        display: grid;
+      }
+
+      article aside {
+        justify-content: end
+      }
+      
+      #hero {
+      display: flex; 
+    }
+
+    #hero div {
+      display: flex;
+    }
+
+    #hero img {
+      width: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) { 
+    #hero div {
+      display: block;
+      text-align: center;
+    }
+
+    #hero img {
+      width: 150px;
+      margin-top: 2em;
+    }
+  }
+  </style>
+  <script type="text/javascript" src="https://james.walters.click/theme/js/prism.js" defer></script>
+</head>
+
+<body>
+  <header class="container">
+  <nav>
+    <ul>
+      <li><a href="https://james.walters.click">All Posts</a></li>
+    </ul>
+    <ul>
+
+        <li><a href="https://james.walters.click/category/linux.html">Linux</a></li>
+        <li><a href="https://james.walters.click/category/meta.html">Meta</a></li>
+        <li><a href="https://james.walters.click/category/python.html">Python</a></li>
+        <li><strong><a href="https://james.walters.click/category/web.html">Web</a></strong></li>
+
+    </ul>
+  </nav>
+  </header>
+  <main style="padding-bottom: 0;padding-top: 0;" class="container">
+<section id="hero">
+  <hgroup style="grid-row: 1;width: 100%; margin-bottom: 0;">
+  <h1><a href="https://james.walters.click">james.walters.click</a></h1>
+  <h2>Thoughts and lessons learned along the path of software development.</h2>
+  </hgroup>
+
+  <div style="grid-row: 1; align-items: center; justify-content: end;">
+    <img src="https://www.gravatar.com/avatar/04574f5e4a03ae08ef293b9adc5bc2e3?s=200&d=https%3A%2F%2Fraw.githubusercontent.com%2Fiamjameswalters%2Fpiccolo%2Fmain%2Fpiccolo.png" style="border-radius: 50%;">
+  </div>
+</section>
+<article>
+  <header>
+    <hgroup>
+    <h2>
+      <a href="https://james.walters.click/drafts/web-scripting-its-problems-and-solutions-1-javascript.html" rel="bookmark"
+         title="Permalink to Web Scripting: Its Problems and Solutions #1 - Javascript">Web Scripting: Its Problems and Solutions #1 - Javascript</a></h2>
+         <h3>By
+          <a href="https://james.walters.click/author/james-walters.html">James Walters</a>           on <time class="published" datetime="2022-10-11T00:00:00-04:00">Tue 11 October 2022</time>.</h3>
+    </hgroup>
+          <aside style="grid-column: 2; display: flex; align-items: end; margin-bottom: 30px;">
+           <div style="color: #73828c">Category: <a href="https://james.walters.click/category/web.html">Web</a>          <br />Tags: 
+            <a href="https://james.walters.click/tag/web-scripting.html">web scripting</a>,             <a href="https://james.walters.click/tag/javascript.html">Javascript</a>,             <a href="https://james.walters.click/tag/jquery.html">JQuery</a>        </div>
+          </aside>
+ 
+  </header>
+
+  <p>Sometime back in the mid-00s, I started toying around for the first time with the web. I owe my fledgling years to <a href="https://web.archive.org/web/20070225131938/http://www.w3schools.com/">W3Schools</a>. I began with HTML, which was easy enough to pick up. This was back before <a href="https://en.wikipedia.org/wiki/Separation_of_concerns#HTML,_CSS,_JavaScript">separation of concerns</a> and <a href="https://en.wikipedia.org/wiki/Semantic_HTML">semantic markup</a> were entrenched standards and you were allowed to use things like <code>&lt;font&gt;</code> tags. You could use just HTML and get pretty far, but eventually you reached for CSS, which was a bit different, but not too bad. They both follow a nicely descriptive and declarative paradigm that is fairly straightforward to grasp.</p>
+<p>Having made satisfactory progress in these domains, it was time to conquer the next frontier: Javascript. This was particularly exciting, as I was told this was where you could create powerful, dynamic behavior on your webpage. </p>
+<p>Things started well enough. I got to a lesson that involved doing some basic math, and building a calculator in the page. Wow, I'd made a real thing! This was kind of neat. </p>
+<p>I did <code>3 + 3</code>. It gave me <code>6</code>. Huzzah!</p>
+<p>I hit <code>+ 3</code>, it answered back <code>9</code>. Beautiful!</p>
+<p>I hit <code>+ 3</code>. It answered <code>11.98</code>. <a href="https://www.youtube.com/watch?v=RlbARlVyRAc">Eh wha?</a></p>
+<p>The nuances of floating-point arithmetic were lost on my young mind&mdash;this was just irritating enough for me to throw up my hands and abandon the entire project of learning Javascript.</p>
+<h2>The Problem with Web Scripting</h2>
+<p>Scripting on the web is hard.</p>
+<p>Part of the problem is the rather ugly fact that scripting on the web is <em>necessary</em> for design patterns many people are after. It's impossible for instance to make a <a href="https://htmx.org/essays/spa-alternative/">single-page application (SPA)</a> without scripting. The indeterminate state of a check box can <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes">only be set with Javascript</a>. Even beyond such implementation issues, there is a cultural tide that assumes you'll be doing scripting if you're doing anything on the web. I find this quite irritating for the following reasons:</p>
+<ul>
+<li>Javascript should be <a href="https://en.wikipedia.org/wiki/Unobtrusive_JavaScript">unobstrusive</a>, but just turn it off in your web browser and see how often that missing funcitonality gets in the way.</li>
+<li>Related, web developers should (but generally don't) seek <a href="https://en.wikipedia.org/wiki/Progressive_enhancement">progressive enhancements</a> that degrade gracefully. This is important since <a href="https://youtu.be/rxlJRydqmk8?t=360">~1% of all users don't receive the javascript</a> they should be getting.</li>
+<li>Code-on-demand is <a href="https://htmx.org/essays/hypermedia-driven-applications/">supposed to be optional</a>.</li>
+</ul>
+<p>This last one matters a lot to me. I'm a firm believer that you should <strong><em>not</em></strong> have to be a programmer in order to make a web page. You'll certainly need to be a programmer to make a web <em>application</em>, but a web <em>page</em>, even a web <em>site</em> composed of such pages, should be possible to make without having to understand the abstractions of programming. Call me a bleeding heart, but it's my right to hand-write piles of HTML files and stuff them on a web server, even if it's less efficient than using a static-site generator.</p>
+<p>Thankfully, this is a lot easier than it used to be. You can do some amazing things with pure CSS these days thanks to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">animations and keyframes</a>, etc. Support for HTML5 widgets (like <a href="https://www.w3schools.com/tags/tag_video.asp">&lt;video&gt;</a> and <a href="https://www.w3schools.com/html/html_form_input_types.asp">&lt;input&gt; types</a> like <code>date</code>, <code>datetime</code>, <code>color</code>, and other things you traditionally built some JS widget for) has been a huge boon. But can you make, say, a modal dialog without using any JS? I mean, <a href="https://codepen.io/Idered/pen/DdeoeW">I guess so</a>, but not without some CSS ingenuity.</p>
+<p>Even granting that it's technologically possible to create most of the common design patterns a typical person would expect with mostly HTML5 and CSS3, there's still a pervasive culture that JS is just a requirement for the modern web, and you should assume you should use it, and everyone assumes you can write it.</p>
+<p>But, Javascript is hard to write, which brings me to my next point.</p>
+<h2>The Elephant in the Room 🐘️</h2>
+<p>You'll notice that I've been using the term "web scripting" and Javascript as loose synonyms. That's because Javascript is the only language you can use for web scripting. I don't like that.</p>
+<p>Here are a handful of reasons why:</p>
+<ul>
+<li>Javascript uses floating-points for numbers. Don't know what that is? You shouldn't have to. They're <em>numbers.</em> They should work like <em>numbers.</em> When I add <code>3 + 3 + 3 + 3</code> I should <strong>not</strong> get <code>11.98</code>.*</li>
+<li>It has noisy syntax. <code>{ }</code> Curly braces delineate most code blocks, <code>object.methods()</code> are everywhere because Javascript was written in the 90s when <a href="https://en.wikipedia.org/wiki/Object-oriented_programming#History">OOP</a> was a ~~fad~~ obsession, and you have to end every line of code with a <code>;</code> semicolon. <a href="https://en.wikibooks.org/wiki/JavaScript/Automatic_semicolon_insertion">Except you don't</a>. <a href="https://betterprogramming.pub/you-might-need-those-semicolons-in-your-javascript-after-all-b28154f93ea8">Except you do</a>.</li>
+<li>Its typecasting is a total mess. Try to add a string and a number, and it'll typecast the number into a string. <code>'1' + 2</code> returns <code>'12'</code>. </li>
+<li>Arrays are a horror. Using <code>delete</code> against an array value doesn't work as I'd expect it to in, say, Python. It just blows a hole in the array. (i.e. <code>delete</code>-ing <code>'B'</code> from <code>['A', 'B', 'C']</code> returns <code>['A', empty, 'C']</code>, instead of <code>['A', 'C']</code>, which is what I probably wanted). Thanks to <a href="https://realpython.com/courses/python-vs-javascript-for-python-devs/">Chris Trudeau</a> for teaching me that one.</li>
+</ul>
+<p>Now, these issues might not be that big of a deal to you. You might even <em>prefer</em> some of these things. Well and good. Every programming language is a little bit different. They all have different styles, and you can use your language, I'll use mine, and we'll all get on our merry way.</p>
+<p>Except on the web. Here, it's Javascript or the highway.</p>
+<p>This is supremely irritating. If I'm writing a web app, I can do that in nearly any language: Python, Ruby, Rust, PHP, Perl, Go, and yes, even Javascript. But no matter which of those languages I use on the backend, I'm still married to JS on the frontend.</p>
+<p>Why does it have to be this way? Why am I bullied into using a language whose syntax I find difficult to read, and whose type behaviors I find confusing and unexpected? At least its cousins in the C family offer faster performance for being lower-level languages that are closer to bare metal, but JS is slow by comparison.</p>
+<p>So all those problems&mdash;and more, as we'll touch on&mdash;are foisted upon anybody who wants to make a halfway decent looking web page. And they have to understand programmatic abstractions on top of that. Gross. 🤢️</p>
+<h2>The Pitch ⚾️</h2>
+<p>So, here's the idea. In this series, I want to look at some good (and some not-so-good) solutions to how to fix some of these fundamental problems with web scripting. Hopefully, we can find something that makes it less programmer-y and more friendly. 🤗️</p>
+<p>I think a perfectly fair test would be my original test: build a simple calculator in HTML/CSS, and script the logic. For everything we examine in our series, I'll build the same functionality as idiomatically as I can to the thing we're using&mdash;this means following conventions like separation of concerns vs writing things inline, writing event handlers or calling functions, etc. I'll try to write code that's as representative as possible of the way that library/framework/tool/thing is <em>normally</em> used.</p>
+<p>We'll begin with the topic <em>d'jeur:</em> plain, vanilla JS. 🍦️</p>
+<h2>Calculating 🧮️</h2>
+<hr>
+<p>*&nbsp;Which, to be fair, you don't anymore, at least not with that particular example. I'm assuming that's to be accounted for by higher-precision floats being used in browsers more modern than Firefox 3 or IE6 or whatever I was using at the time. 👴️ But, you'll still encounter bizarre quirks that are side effects of this eventually.</p>
+
+  </article>
+  </main>
+  <footer style="display: grid; grid-template-columns: repeat(auto-fit, [col-start] minmax(100px, 1fr) [col-end]); padding-top: 0;" class="container">
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Social:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="http://github.com/iamjameswalters" rel="me">Github</a></li>
+      <li><a href="https://fosstodon.org/@jameswalters" rel="me">Mastodon</a></li>
+      <li><a href="https://ko-fi.com/iamjameswalters" rel="me">By me a coffee (Ko-Fi)</a></li>
+      <li><a href="mailto:iamjameswalters@gmail.com" rel="me">iamjameswalters@gmail.com</a></li>
+      </ul>
+    </nav>
+    </aside>
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Links:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="https://grugbrain.dev/">The Grug Brained Developer</a></li>
+      <li><a href="https://adamj.eu/tech">Adam Johnson's Blog</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Feeds:</strong></li>
+      </ul>
+      <ul>
+        <li><a href="https://james.walters.click/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <div style="grid-row: 2; grid-column: span 3;">
+      <hr />
+      <p style="padding-top: 0.5em;">
+      Built using the <a href="https://github.com/iamjameswalters/piccolo">Piccolo</a> theme, based on <a href="https://picocss.com/">Pico.css</a>.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
