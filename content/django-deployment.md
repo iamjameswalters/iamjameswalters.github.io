@@ -96,7 +96,7 @@ In older days, a standard was defined called [CGI](https://en.wikipedia.org/wiki
 
 In Python land, we have a similar standard called [WSGI](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) (or Web Server Gateway Interface). It's usually pronounced _whizz-ghee._ The way this works is the web server passes the request over to a WSGI server (like [gunicorn](https://pypi.org/project/gunicorn/) or [Waitress](https://pypi.org/project/waitress/)). That WSGI server runs a WSGI callable for your application. How on earth do I make that, you ask? Django already did it for you when you ran `startproject`&mdash;it's in the `wsgi.py` file. 
 
-So, you need to install a WSGI server, and pass it your `wsgi.py` file to run. If you're setting up a virtual machine, you might write a script to run this on boot, or use a [systemd service](https://vsupalov.com/django-systemd-crashcourse/). Then, you [configure the web server](https://realpython.com/django-nginx-gunicorn/#incorporating-nginx) to pass requests over to the WSGI server. The WSGI server will run it through your Django app, and after generating the appropiate page, pass that response back to the web server to hand off to your user.
+So, you need to install a WSGI server, and pass it your `wsgi.py` file to run. If you're setting up a virtual machine, you might write a script to run this on boot, or use a [systemd service](https://vsupalov.com/django-systemd-crashcourse/). Then, you [configure the web server](https://realpython.com/django-nginx-gunicorn/#incorporating-nginx) to pass requests over to the WSGI server. The WSGI server will run it through your Django app, and after generating the appropriate page, pass that response back to the web server to hand off to your user.
 
 ### ASGI
 
