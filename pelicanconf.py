@@ -23,7 +23,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('The Grug Brained Developer', 'https://grugbrain.dev/'),("Adam Johnson's Blog", 'https://adamj.eu/tech'),)
+LINKS = (('Hypermedia Systems', 'https://hypermedia.systems/'),('The Grug Brained Developer', 'https://grugbrain.dev/'),("Adam Johnson's Blog", 'https://adamj.eu/tech'),)
 
 
 # Social widget
