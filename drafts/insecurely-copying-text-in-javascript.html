@@ -16,7 +16,8 @@
 
 
 
-    <meta name="tags" content="JavaScript" />
+    <meta name="tags" content="Javascript" />
+    <meta name="tags" content="_hyperscript" />
 
   <link href="https://james.walters.click/theme/css/fonts.css" rel="stylesheet" type="text/css" />
   <style>
@@ -100,20 +101,20 @@
   <header>
     <hgroup>
     <h2>
-      <a href="https://james.walters.click/insecurely-copying-text-in-javascript.html" rel="bookmark"
+      <a href="https://james.walters.click/drafts/insecurely-copying-text-in-javascript.html" rel="bookmark"
          title="Permalink to Insecurely Copying Text in Javascript">Insecurely Copying Text in Javascript</a></h2>
          <h3>By
-          <a href="https://james.walters.click/author/james-walters.html">James Walters</a>           on <time class="published" datetime="2023-04-11T00:00:00-04:00">Tue 11 April 2023</time>.</h3>
+          <a href="https://james.walters.click/author/james-walters.html">James Walters</a>           on <time class="published" datetime="2023-01-28T00:00:00-05:00">Sat 28 January 2023</time>.</h3>
     </hgroup>
           <aside style="grid-column: 2; display: flex; align-items: end; margin-bottom: 30px;">
            <div style="color: #73828c">Category: <a href="https://james.walters.click/category/web.html">Web</a>          <br />Tags: 
-            <a href="https://james.walters.click/tag/javascript.html">JavaScript</a>        </div>
+            <a href="https://james.walters.click/tag/javascript.html">Javascript</a>,             <a href="https://james.walters.click/tag/_hyperscript.html">_hyperscript</a>        </div>
           </aside>
  
   </header>
 
   <p>I've been working on an internal web app at my job for our call and chat agents. There's some text provided there that agents commonly need to copy and paste. I thought it might be nice to write a bit of scripting to automatically copy these bits of text to the clipboard when the text is selected, without having to Ctrl-C.</p>
-<p>After perusing the web, the obvious answer seemed to be to use JavaScript's <a href="https://devdocs.io/dom/clipboard">clipboard API</a>. In order to copy text, you would just write something like: </p>
+<p>After perusing the web, the obvious answer seemed to be to use the <a href="https://devdocs.io/dom/clipboard">clipboard API</a>. In order to copy text, you would just write something like: </p>
 <div class="highlight"><pre><span></span><code><span class="nx">navigator</span><span class="p">.</span><span class="nx">clipboard</span><span class="p">.</span><span class="nx">writeText</span><span class="p">(</span><span class="s2">&quot;text I want to copy&quot;</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
@@ -124,34 +125,7 @@
 <p>Is there any other way?</p>
 <h2>I'll Copy Whatever I Darn Well Please</h2>
 <p>It turns out there kind of is.</p>
-<p>This <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard#using_execcommand">MDN article</a> is a great resource on this topic. There's a deprecated API called <code>document.execCommand()</code> that allows you to do all kinds of things, one of which is <code>copy</code>. But if it's deprecated, how can we use it?</p>
-<p>The key is in this condition (emphasis mine):</p>
-<blockquote>
-<p>These commands can be used without any special permission in <strong>short-lived event handlers</strong> for a user action (<strong>for example, a click handler</strong>).</p>
-</blockquote>
-<p>That's exactly our usecase. I'm assuming this API wouldn't work if you had it as part of a script. But as part of an <code>onclick</code> handler, the browser will execute it.</p>
-<p>Running <code>document.execCommand('copy')</code> will copy whatever the currently selected text is to the clipboard, so you have to manually query for the element you need, call its <code>.select()</code> method to have the cursor select its text, and then call <code>document.execCommand('copy')</code>, which is a little cumbersome. In my case, I've got some CSS applied to a <code>&lt;span&gt;</code> such that whenever you click anywhere inside it, all of its text gets selected. That just leaves the copy logic. My code looks something like this:</p>
-<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- span containing text to copy --&gt;</span>
-<span class="p">&lt;</span><span class="nt">span</span> 
-  <span class="na">style</span><span class="o">=</span><span class="s">&quot;user-select: all;&quot;</span>
-  <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;document.execCommand(&#39;copy&#39;)&quot;</span><span class="p">&gt;</span>
-  Copy this text
-<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</code></pre></div>
-
-<p>It's possible you could encounter a race condition where the command gets executed before the CSS, but that's never happened in any of my testing. Anyway, the solution would be to add a 50ms pause or something barely noticeable like that before running the command to give the CSS time to be processed.</p>
-<p>Try it yourself! </p>
-<div style="text-align: center;margin: 30px 0;">
-<span style="user-select: all;" onclick="document.execCommand('copy')">
-  Copy this text
-</span>
-</div>
-
-<p>Did it work for you?</p>
-<p>Anyway, that's how you can copy-and-paste something in JavaScript if you can't use <code>navigator.clipboard</code> for whatever reason, like serving from an "insecure context". I suspect serving web pages over unencrypted connections is still common enough for things like internal intranet sites that someone might need to know about this.</p>
-<footer style="font-weight: bold; text-align: center;">
-Found this helpful? <a href="https://ko-fi.com/iamjameswalters">Buy me a coffee!</a> ☕️
-</footer>
+<p>This <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard">MDN article</a> is a great resource on this topic.</p>
 
   </article>
   </main>
@@ -175,6 +149,7 @@ Found this helpful? <a href="https://ko-fi.com/iamjameswalters">Buy me a coffee!
         <li><strong>Links:</strong></li>
       </ul>
       <ul>
+      <li><a href="https://hypermedia.systems/">Hypermedia Systems</a></li>
       <li><a href="https://grugbrain.dev/">The Grug Brained Developer</a></li>
       <li><a href="https://adamj.eu/tech">Adam Johnson's Blog</a></li>
       </ul>
