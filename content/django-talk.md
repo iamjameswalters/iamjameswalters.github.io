@@ -5,7 +5,7 @@ Category: Python
 Tags: Django, deployment, DjangoCon
 status: draft
 
-It's such a delight to be giving a talk at this year's DjangoCon! Below are links to any resources I mentioned:
+It's such a delight to give a talk at this year's DjangoCon! Below are links to any resources I mentioned:
 
 ### Links to the Talk
 
