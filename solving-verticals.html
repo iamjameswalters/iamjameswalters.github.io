@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Pelican" />
+  <title>james.walters.click - Solving Verticals</title>
+  <meta name="description" content="Thoughts and lessons learned along the path of software development." />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/pico.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/prism.css" />
+  <link
+    href="https://james.walters.click/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="james.walters.click Full Atom Feed" />
+
+
+
+
+    <meta name="tags" content="Freelance" />
+    <meta name="tags" content="Show and Tell" />
+    <meta name="tags" content="portfolio" />
+
+  <link href="https://james.walters.click/theme/css/fonts.css" rel="stylesheet" type="text/css" />
+  <style>
+    article img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #hero {
+      align-items: center; 
+      margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 481px) { 
+
+      article header {
+        display: grid;
+      }
+
+      article aside {
+        justify-content: end
+      }
+      
+      #hero {
+      display: flex; 
+    }
+
+    #hero div {
+      display: flex;
+    }
+
+    #hero img {
+      width: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) { 
+    #hero div {
+      display: block;
+      text-align: center;
+    }
+
+    #hero img {
+      width: 150px;
+      margin-top: 2em;
+    }
+  }
+  </style>
+  <script type="text/javascript" src="https://james.walters.click/theme/js/prism.js" defer></script>
+</head>
+
+<body>
+  <header class="container">
+  <nav>
+    <ul>
+      <li><a href="https://james.walters.click">All Posts</a></li>
+    </ul>
+    <ul>
+
+        <li><a href="https://james.walters.click/category/linux.html">Linux</a></li>
+        <li><strong><a href="https://james.walters.click/category/meta.html">Meta</a></strong></li>
+        <li><a href="https://james.walters.click/category/python.html">Python</a></li>
+        <li><a href="https://james.walters.click/category/web.html">Web</a></li>
+
+    </ul>
+  </nav>
+  </header>
+  <main style="padding-bottom: 0;padding-top: 0;" class="container">
+<section id="hero">
+  <hgroup style="grid-row: 1;width: 100%; margin-bottom: 0;">
+  <h1><a href="https://james.walters.click">james.walters.click</a></h1>
+  <h2>Thoughts and lessons learned along the path of software development.</h2>
+  </hgroup>
+
+  <div style="grid-row: 1; align-items: center; justify-content: end;">
+    <img src="https://www.gravatar.com/avatar/04574f5e4a03ae08ef293b9adc5bc2e3?s=200&d=https%3A%2F%2Fraw.githubusercontent.com%2Fiamjameswalters%2Fpiccolo%2Fmain%2Fpiccolo.png" style="border-radius: 50%;">
+  </div>
+</section>
+<article>
+  <header>
+    <hgroup>
+    <h2>
+      <a href="https://james.walters.click/solving-verticals.html" rel="bookmark"
+         title="Permalink to Solving Verticals">Solving Verticals</a></h2>
+         <h3>By
+          <a href="https://james.walters.click/author/james-walters.html">James Walters</a>           on <time class="published" datetime="2023-09-08T00:00:00-04:00">Fri 08 September 2023</time>.</h3>
+    </hgroup>
+          <aside style="grid-column: 2; display: flex; align-items: end; margin-bottom: 30px;">
+           <div style="color: #73828c">Category: <a href="https://james.walters.click/category/meta.html">Meta</a>          <br />Tags: 
+            <a href="https://james.walters.click/tag/freelance.html">Freelance</a>,             <a href="https://james.walters.click/tag/show-and-tell.html">Show and Tell</a>,             <a href="https://james.walters.click/tag/portfolio.html">portfolio</a>        </div>
+          </aside>
+ 
+  </header>
+
+  <p>A little while back, I did some freelancing with a couple of friends for a real estate investment firm. One of my friends knows these guys. They have a great business, but the place where they were falling down was keeping investors in the loop on how things were developing with their properties. One of the big fish asked for a web portal where he could log in and look at his investments and see at a glance how they were doing. That's where we came in.</p>
+<p>Being Python/Django guys, we decided to develop the thing in Django. We just used Bootstrap for the frontend, the clients weren't picky. Bootstrap is something we all already had experience with. I know it gets kind of a bad rap because it's been overused, but there's a reason it was overused: it's refreshing to be able to work with a CSS framework that's light on JS. You can move a lot quicker.</p>
+<p>Here's what the investor dashboard looks like:</p>
+<p><img alt="Investor Dashboard" src="images/integrity_dashboard.png"></p>
+<p>One of my teammates has always had a great eye for UI and design. I like the look of the grid of cards! It wouldn't have occurred to me.</p>
+<p>If you look at the property, you'll get the details about it at a glance, as well as any status updates that have been posted about it.</p>
+<p><img alt="Property Page" src="images/integrity_property.png"></p>
+<p>Most of my job involved setting up user accounts, which we handled through <a href="https://github.com/jazzband/django-invitations">django-invitations</a>. Fanastic library that makes it trivial to email people and have them set up an account! Here's the screen I made to manage invitations at a glance:</p>
+<p><img alt="User Invitations" src="images/integrity_invitations.png"></p>
+<p>Fundamentally though, this was really just a basic CRUD app with three main models: users, properties, and investments by users in properties. You can see here how the site management page offers you access to all of them:</p>
+<p><img alt="Managing the Site" src="images/integrity_categories.png"></p>
+<p>It's a pretty simple site, but it provided the client with something they really needed: a single place to keep everything relevant to their customers that offers them a view into how things were progressing.</p>
+<p>And that's what I want to talk about today.</p>
+<h2>Solving Verticals ⬆️</h2>
+<p>I'm pretty sure I first heard <a href="http://wsvincent.com/">Will Vincent</a> talk about this on Django Chat one time, so he gets the hat tip. 🎩️</p>
+<p>Most businesses really do run on emails and Excel spreadsheets and loose PDFs and that stack of papers on Janice's desk that she's supposed to deliver across town by 3:15 pm. Those of us who write software for a living&mdash;or even just know what software solutions for these sorts of things exist out in the wild&mdash;might be appalled, but yes, they really work this way. It's bonkers.</p>
+<p>It really doesn't take much to provide a single, integrated solution that handles everything about a business's workflow from top to bottom. It just involves accomodating the custom abstractions that comprise the building blocks of some particular industry's workflow. For this project, it was investments and properties. For doctors, it might be patients or visits or medical incidents. For lawyers, it might be cases. None of that is rocket science, but if their abstractions are baked into the cake, that's a world of improvement to them over having to figure out how to map their abstractions onto someone else's abstractions in some project management suite.</p>
+<p>There are tons of these verticals out there that can be solved with what amounts to minimal effort for the savvy software developer. A lot of these businesses don't have developers on staff (because they don't need them), but they also aren't looking to contract out something like this because they don't realize just how much better an integrated solution can be over the existing "CC: me on that email and forward that attachment" status quo.</p>
+<p>Django Developers are <a href="https://lp.jetbrains.com/django-developer-survey-2022/">twice as likely to freelance</a> over other developers generally. That's because Django's batteries are included. Most of the work you need to do on a freelance project has already been done. This story demonstrates that, yeah, it really doesn't take that much to introduce a software tool that provides a lot of value. There are simply too many businesses and industries that have never had anyone actually build it for them.</p>
+<p>If you're looking for ideas for a side gig, I'd recommend thinking in this direction for starters.</p>
+<footer style="font-weight: bold; text-align: center;">
+Found this helpful? <a href="https://ko-fi.com/iamjameswalters">Buy me a coffee!</a> ☕️
+</footer>
+
+  </article>
+  </main>
+  <footer style="display: grid; grid-template-columns: repeat(auto-fit, [col-start] minmax(100px, 1fr) [col-end]); padding-top: 0;" class="container">
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Social:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="http://github.com/iamjameswalters" rel="me">Github</a></li>
+      <li><a href="https://fosstodon.org/@jameswalters" rel="me">Mastodon</a></li>
+      <li><a href="https://ko-fi.com/iamjameswalters" rel="me">By me a coffee (Ko-Fi)</a></li>
+      <li><a href="mailto:iamjameswalters@gmail.com" rel="me">iamjameswalters@gmail.com</a></li>
+      </ul>
+    </nav>
+    </aside>
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Links:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="https://hypermedia.systems/">Hypermedia Systems</a></li>
+      <li><a href="https://grugbrain.dev/">The Grug Brained Developer</a></li>
+      <li><a href="https://adamj.eu/tech">Adam Johnson's Blog</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Feeds:</strong></li>
+      </ul>
+      <ul>
+        <li><a href="https://james.walters.click/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <div style="grid-row: 2; grid-column: span 3;">
+      <hr />
+      <p style="padding-top: 0.5em;">
+      Built using the <a href="https://github.com/iamjameswalters/piccolo">Piccolo</a> theme, based on <a href="https://picocss.com/">Pico.css</a>.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

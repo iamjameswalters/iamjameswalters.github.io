@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Pelican" />
+  <title>james.walters.click - DjangoCon 2023 Slides & Resources</title>
+  <meta name="description" content="Thoughts and lessons learned along the path of software development." />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/pico.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/prism.css" />
+  <link
+    href="https://james.walters.click/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="james.walters.click Full Atom Feed" />
+
+
+
+
+    <meta name="tags" content="Django" />
+    <meta name="tags" content="deployment" />
+    <meta name="tags" content="DjangoCon" />
+    <meta name="tags" content="portfolio" />
+
+  <link href="https://james.walters.click/theme/css/fonts.css" rel="stylesheet" type="text/css" />
+  <style>
+    article img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #hero {
+      align-items: center; 
+      margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 481px) { 
+
+      article header {
+        display: grid;
+      }
+
+      article aside {
+        justify-content: end
+      }
+      
+      #hero {
+      display: flex; 
+    }
+
+    #hero div {
+      display: flex;
+    }
+
+    #hero img {
+      width: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) { 
+    #hero div {
+      display: block;
+      text-align: center;
+    }
+
+    #hero img {
+      width: 150px;
+      margin-top: 2em;
+    }
+  }
+  </style>
+  <script type="text/javascript" src="https://james.walters.click/theme/js/prism.js" defer></script>
+</head>
+
+<body>
+  <header class="container">
+  <nav>
+    <ul>
+      <li><a href="https://james.walters.click">All Posts</a></li>
+    </ul>
+    <ul>
+
+        <li><a href="https://james.walters.click/category/linux.html">Linux</a></li>
+        <li><a href="https://james.walters.click/category/meta.html">Meta</a></li>
+        <li><strong><a href="https://james.walters.click/category/python.html">Python</a></strong></li>
+        <li><a href="https://james.walters.click/category/web.html">Web</a></li>
+
+    </ul>
+  </nav>
+  </header>
+  <main style="padding-bottom: 0;padding-top: 0;" class="container">
+<section id="hero">
+  <hgroup style="grid-row: 1;width: 100%; margin-bottom: 0;">
+  <h1><a href="https://james.walters.click">james.walters.click</a></h1>
+  <h2>Thoughts and lessons learned along the path of software development.</h2>
+  </hgroup>
+
+  <div style="grid-row: 1; align-items: center; justify-content: end;">
+    <img src="https://www.gravatar.com/avatar/04574f5e4a03ae08ef293b9adc5bc2e3?s=200&d=https%3A%2F%2Fraw.githubusercontent.com%2Fiamjameswalters%2Fpiccolo%2Fmain%2Fpiccolo.png" style="border-radius: 50%;">
+  </div>
+</section>
+<article>
+  <header>
+    <hgroup>
+    <h2>
+      <a href="https://james.walters.click/drafts/djangocon-2023-slides-resources.html" rel="bookmark"
+         title="Permalink to DjangoCon 2023 Slides & Resources">DjangoCon 2023 Slides & Resources</a></h2>
+         <h3>By
+          <a href="https://james.walters.click/author/james-walters.html">James Walters</a>           on <time class="published" datetime="2023-10-17T00:00:00-04:00">Tue 17 October 2023</time>.</h3>
+    </hgroup>
+          <aside style="grid-column: 2; display: flex; align-items: end; margin-bottom: 30px;">
+           <div style="color: #73828c">Category: <a href="https://james.walters.click/category/python.html">Python</a>          <br />Tags: 
+            <a href="https://james.walters.click/tag/django.html">Django</a>,             <a href="https://james.walters.click/tag/deployment.html">deployment</a>,             <a href="https://james.walters.click/tag/djangocon.html">DjangoCon</a>,             <a href="https://james.walters.click/tag/portfolio.html">portfolio</a>        </div>
+          </aside>
+ 
+  </header>
+
+  <p>It's such a delight to give a talk at this year's DjangoCon! Below are links to any resources I mentioned:</p>
+<h3>Links to the Talk</h3>
+<ul>
+<li>Link to <a href="https://docs.google.com/presentation/d/1sIJ2NwSQD36IEj10bl1nX0z_Tf6Gfu62Z-vAyqSfKEc/edit?usp=sharing">my slides on Google Docs</a>. The presenter notes contain a complete transcript of everything I said.</li>
+<li>I'll link to the video of the talk here as soon as its uploaded.</li>
+</ul>
+<h3>Static Files</h3>
+<ul>
+<li>Django Documentation - <a href="https://docs.djangoproject.com/en/stable/howto/static-files/">How to manage static files</a></li>
+<li><a href="https://whitenoise.readthedocs.io/en/latest/django.html">Whitenoise with Django Documentation</a></li>
+<li><a href="https://www.youtube.com/watch?v=E613X3RBegI">Assets in Django Without Losing Your Hair</a>, talk by Jacob Kaplan-Moss at PyCon 2019</li>
+<li>RealPython, <a href="https://realpython.com/django-nginx-gunicorn/#serving-static-files-directly-with-nginx">Serving Static Files Directly with nginx</a></li>
+</ul>
+<h3>Database</h3>
+<ul>
+<li>Django Documentation - <a href="https://docs.djangoproject.com/en/4.2/ref/databases/">Databases (API Reference)</a></li>
+<li>Django Documentation - <a href="https://docs.djangoproject.com/en/latest/ref/settings/#databases"><code>DATABASE</code> Settings</a></li>
+<li>Fly.io, <a href="https://fly.io/blog/sqlite-internals-wal/">How SQLite Scales Read Concurrency</a></li>
+<li><a href="https://datasette.io/">Datasette</a></li>
+</ul>
+<h3>WSGI</h3>
+<ul>
+<li>Django Documentation - <a href="https://docs.djangoproject.com/en/stable/howto/deployment/wsgi/">How to deploy with WSGI</a></li>
+<li><a href="https://www.youtube.com/watch?v=WqrCnVAkLIo">WSGI for Web Developers</a>, talk by Ryan Wilson-Perkin at PyConCA 2018</li>
+</ul>
+<h3>Web Servers</h3>
+<ul>
+<li>Django Documentation - <a href="https://docs.djangoproject.com/en/stable/howto/deployment/wsgi/modwsgi/">How to use Django with Apache and mod_wsgi</a></li>
+<li>RealPython, <a href="https://realpython.com/django-nginx-gunicorn/">Securely Deploy a Django App With Gunicorn, Nginx, &amp; HTTPS</a></li>
+</ul>
+<h3>Deployment Tools</h3>
+<ul>
+<li>Django Documentation - <a href="https://docs.djangoproject.com/en/stable/howto/deployment/checklist/">Deployment Checklist</a></li>
+<li><a href="https://django-simple-deploy.readthedocs.io/en/latest/">django-simple-deploy</a></li>
+</ul>
+<h3>Additional Resources</h3>
+<ul>
+<li>Here's the <a href="django-deployment.md">blog post</a> from which this talk was adapted.</li>
+<li>Here's the <a href="https://wagtail.org/blog/2023-wagtail-deployment-survey/">2023 Wagtail Developer Survery</a> I mentioned</li>
+<li><a href="https://vsupalov.com/django-systemd-crashcourse/">Django Systemd Crashcourse</a> </li>
+</ul>
+<footer style="font-weight: bold; text-align: center;">
+Found this helpful or informative? <a href="https://ko-fi.com/iamjameswalters">Buy me a coffee!</a> ☕️
+</footer>
+
+  </article>
+  </main>
+  <footer style="display: grid; grid-template-columns: repeat(auto-fit, [col-start] minmax(100px, 1fr) [col-end]); padding-top: 0;" class="container">
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Social:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="http://github.com/iamjameswalters" rel="me">Github</a></li>
+      <li><a href="https://fosstodon.org/@jameswalters" rel="me">Mastodon</a></li>
+      <li><a href="https://ko-fi.com/iamjameswalters" rel="me">By me a coffee (Ko-Fi)</a></li>
+      <li><a href="mailto:iamjameswalters@gmail.com" rel="me">iamjameswalters@gmail.com</a></li>
+      </ul>
+    </nav>
+    </aside>
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Links:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="https://hypermedia.systems/">Hypermedia Systems</a></li>
+      <li><a href="https://grugbrain.dev/">The Grug Brained Developer</a></li>
+      <li><a href="https://adamj.eu/tech">Adam Johnson's Blog</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Feeds:</strong></li>
+      </ul>
+      <ul>
+        <li><a href="https://james.walters.click/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <div style="grid-row: 2; grid-column: span 3;">
+      <hr />
+      <p style="padding-top: 0.5em;">
+      Built using the <a href="https://github.com/iamjameswalters/piccolo">Piccolo</a> theme, based on <a href="https://picocss.com/">Pico.css</a>.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
