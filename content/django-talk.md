@@ -2,7 +2,7 @@ Title: DjangoCon 2023 Slides & Resources
 Date: 2023-10-17
 Author: James Walters
 Category: Python
-Tags: Django, deployment, DjangoCon
+Tags: Django, deployment, DjangoCon, portfolio
 status: draft
 
 It's such a delight to give a talk at this year's DjangoCon! Below are links to any resources I mentioned:

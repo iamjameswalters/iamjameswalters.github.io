@@ -1,7 +1,7 @@
 Title: Piccolo: A Pelican Theme For Pico.css
 Date: 2023-08-19
 Category: Web
-Tags: Show and Tell
+Tags: Show and Tell, portfolio
 Status: draft
 
 Hi! I'd like to show-and-tell a little project. 😁️
