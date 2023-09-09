@@ -43,6 +43,7 @@ It's such a delight to give a talk at this year's DjangoCon! Below are links to 
 ### Additional Resources
 
 - Here's the [blog post](django-deployment.md) from which this talk was adapted.
+- Here's the [2023 Wagtail Developer Survery](https://wagtail.org/blog/2023-wagtail-deployment-survey/) I mentioned
 - [Django Systemd Crashcourse](https://vsupalov.com/django-systemd-crashcourse/) 
 
 <footer style="font-weight: bold; text-align: center;">
