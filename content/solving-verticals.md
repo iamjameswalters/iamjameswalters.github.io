@@ -12,7 +12,7 @@ Here's what the investor dashboard looks like:
 
 ![Investor Dashboard](images/integrity_dashboard.png)
 
-One of my teammates has always had a great eye for UI and design. I like the look of the grid of cards! It wouldn't have occurred to me.
+One of my teammates has always had a great eye for UI and design. I like the look of the grid of cards! It wouldn't have occurred to me. The other more data-oriented teammate accommodated an investor request by adding the ability to export everything about his investments as a CSV. He just wanted something he could throw over to his accountant.
 
 If you look at the property, you'll get the details about it at a glance, as well as any status updates that have been posted about it.
 
@@ -36,7 +36,7 @@ I'm pretty sure I first heard [Will Vincent](http://wsvincent.com/) talk about t
 
 Most businesses really do run on emails and Excel spreadsheets and loose PDFs and that stack of papers on Janice's desk that she's supposed to deliver across town by 3:15 pm. Those of us who write software for a living&mdash;or even just know what software solutions for these sorts of things exist out in the wild&mdash;might be appalled, but yes, they really work this way. It's bonkers.
 
-It really doesn't take much to provide a single, integrated solution that handles everything about a business's workflow from top to bottom. It just involves accomodating the custom abstractions that comprise the building blocks of some particular industry's workflow. For this project, it was investments and properties. For doctors, it might be patients or visits or medical incidents. For lawyers, it might be cases. None of that is rocket science, but if their abstractions are baked into the cake, that's a world of improvement to them over having to figure out how to map their abstractions onto someone else's abstractions in some project management suite.
+It really doesn't take much to provide a single, integrated solution that handles everything about a business's workflow from top to bottom. It just involves accommodating the custom abstractions that comprise the building blocks of some particular industry's workflow. For this project, it was investments and properties. For doctors, it might be patients or visits or medical incidents. For lawyers, it might be cases. None of that is rocket science, but if their abstractions are baked into the cake, that's a world of improvement to them over having to figure out how to map their abstractions onto someone else's abstractions in some project management suite.
 
 There are tons of these verticals out there that can be solved with what amounts to minimal effort for the savvy software developer. A lot of these businesses don't have developers on staff (because they don't need them), but they also aren't looking to contract out something like this because they don't realize just how much better an integrated solution can be over the existing "CC: me on that email and forward that attachment" status quo.
 
