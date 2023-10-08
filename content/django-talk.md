@@ -5,7 +5,7 @@ Category: Python
 Tags: Django, deployment, DjangoCon, portfolio
 status: draft
 
-It's such a delight to give a talk at this year's DjangoCon! This is my first tech conference, as well as my first time presenting. After the conference is over, I'll take some time to reflect on everything and post about it here, so keep an eye 👀️ out for that! 
+It's such a delight to give a talk at this year's DjangoCon! This is my first tech conference, as well as my first time presenting. I'd love to thank [Will Vincent](https://fosstodon.org/@wsvincent), [Eric Matthes](https://fosstodon.org/@ehmatthes), and [Alyssa Nicholl](https://twitter.com/AlyssaNicoll) for all their help reviewing and refining this talk to be the best it could be. 💚️ After the conference is over, I'll take some time to reflect on everything and post about it here, so keep an eye 👀️ out for that! 
 
 In the meantime, below are links to any resources I mentioned:
 
