@@ -3,7 +3,6 @@ Date: 2023-10-17
 Author: James Walters
 Category: Python
 Tags: Django, deployment, DjangoCon, portfolio
-status: draft
 
 It's such a delight to give a talk at this year's DjangoCon! This is my first tech conference, as well as my first time presenting. I'd love to thank [Will Vincent](https://fosstodon.org/@wsvincent), [Eric Matthes](https://fosstodon.org/@ehmatthes), and [Alyssa Nicholl](https://twitter.com/AlyssaNicoll) for all their help reviewing and refining this talk to be the best it could be. I also want to thank my good friend and colleague [Sam Crabtree](https://fosstodon.org/@CrashBandit1990), without whose influence I wouldn't have learned Python and Django in the first place. 💚️ After the conference is over, I'll take some time to reflect on everything and post about it here, so keep an eye 👀️ out for that! 
 
@@ -48,6 +47,13 @@ In the meantime, below are links to any resources I mentioned:
 - Here's the [2023 Wagtail Developer Survery](https://wagtail.org/blog/2023-wagtail-deployment-survey/) I mentioned
 - [Django Systemd Crashcourse](https://vsupalov.com/django-systemd-crashcourse/) 
 
-<footer style="font-weight: bold; text-align: center;">
+<footer id="footer" style="font-weight: bold; text-align: center;">
 Found this helpful or informative? <a href="https://ko-fi.com/iamjameswalters">Buy me a coffee!</a> ☕️
 </footer>
+<script>
+    let now = new Date; 
+    let oct31 = new Date('2023-10-31'); 
+    if (now < oct31) {
+      document.getElementById('footer').style.display = 'none';
+    }
+</script>
