@@ -37,7 +37,7 @@
 &lt;/ul&gt;
 &lt;h3&gt;Additional Resources&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Here's the &lt;a href="django-deployment.md"&gt;blog post&lt;/a&gt; from which this talk was adapted.&lt;/li&gt;
+&lt;li&gt;Here's the &lt;a href="https://james.walters.click/what-django-deployment-is-really-about.html"&gt;blog post&lt;/a&gt; from which this talk was adapted.&lt;/li&gt;
 &lt;li&gt;Here's the &lt;a href="https://wagtail.org/blog/2023-wagtail-deployment-survey/"&gt;2023 Wagtail Developer Survery&lt;/a&gt; I mentioned&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://vsupalov.com/django-systemd-crashcourse/"&gt;Django Systemd Crashcourse&lt;/a&gt; &lt;/li&gt;
 &lt;/ul&gt;
