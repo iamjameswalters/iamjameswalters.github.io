@@ -40,6 +40,7 @@ In the meantime, below are links to any resources I mentioned:
 
 - Django Documentation - [Deployment Checklist](https://docs.djangoproject.com/en/stable/howto/deployment/checklist/)
 - [django-simple-deploy](https://django-simple-deploy.readthedocs.io/en/latest/)
+- [django-production](https://github.com/lincolnloop/django-production)
 
 ### Additional Resources
 
