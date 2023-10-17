@@ -34,6 +34,7 @@
 &lt;ul&gt;
 &lt;li&gt;Django Documentation - &lt;a href="https://docs.djangoproject.com/en/stable/howto/deployment/checklist/"&gt;Deployment Checklist&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://django-simple-deploy.readthedocs.io/en/latest/"&gt;django-simple-deploy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/lincolnloop/django-production"&gt;django-production&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Additional Resources&lt;/h3&gt;
 &lt;ul&gt;
