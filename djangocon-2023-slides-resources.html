@@ -103,7 +103,7 @@
   <header>
     <hgroup>
     <h2>
-      <a href="https://james.walters.click/drafts/djangocon-2023-slides-resources.html" rel="bookmark"
+      <a href="https://james.walters.click/djangocon-2023-slides-resources.html" rel="bookmark"
          title="Permalink to DjangoCon 2023 Slides & Resources">DjangoCon 2023 Slides & Resources</a></h2>
          <h3>By
           <a href="https://james.walters.click/author/james-walters.html">James Walters</a>           on <time class="published" datetime="2023-10-17T00:00:00-04:00">Tue 17 October 2023</time>.</h3>
@@ -115,7 +115,8 @@
  
   </header>
 
-  <p>It's such a delight to give a talk at this year's DjangoCon! Below are links to any resources I mentioned:</p>
+  <p>It's such a delight to give a talk at this year's DjangoCon! This is my first tech conference, as well as my first time presenting. I'd love to thank <a href="https://fosstodon.org/@wsvincent">Will Vincent</a>, <a href="https://fosstodon.org/@ehmatthes">Eric Matthes</a>, and <a href="https://twitter.com/AlyssaNicoll">Alyssa Nicholl</a> for all their help reviewing and refining this talk to be the best it could be. I also want to thank my good friend and colleague <a href="https://fosstodon.org/@CrashBandit1990">Sam Crabtree</a>, without whose influence I wouldn't have learned Python and Django in the first place. 💚️ After the conference is over, I'll take some time to reflect on everything and post about it here, so keep an eye 👀️ out for that! </p>
+<p>In the meantime, below are links to any resources I mentioned:</p>
 <h3>Links to the Talk</h3>
 <ul>
 <li>Link to <a href="https://docs.google.com/presentation/d/1sIJ2NwSQD36IEj10bl1nX0z_Tf6Gfu62Z-vAyqSfKEc/edit?usp=sharing">my slides on Google Docs</a>. The presenter notes contain a complete transcript of everything I said.</li>
@@ -156,9 +157,16 @@
 <li>Here's the <a href="https://wagtail.org/blog/2023-wagtail-deployment-survey/">2023 Wagtail Developer Survery</a> I mentioned</li>
 <li><a href="https://vsupalov.com/django-systemd-crashcourse/">Django Systemd Crashcourse</a> </li>
 </ul>
-<footer style="font-weight: bold; text-align: center;">
+<footer id="footer" style="font-weight: bold; text-align: center;">
 Found this helpful or informative? <a href="https://ko-fi.com/iamjameswalters">Buy me a coffee!</a> ☕️
 </footer>
+<script>
+    let now = new Date; 
+    let oct31 = new Date('2023-10-31'); 
+    if (now < oct31) {
+      document.getElementById('footer').style.display = 'none';
+    }
+</script>
 
   </article>
   </main>

@@ -1,5 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>james.walters.click</title><link href="https://james.walters.click/" rel="alternate"></link><link href="https://james.walters.click/feeds/all.atom.xml" rel="self"></link><id>https://james.walters.click/</id><updated>2023-09-08T00:00:00-04:00</updated><subtitle>Thoughts and lessons learned along the path of software development.</subtitle><entry><title>Solving Verticals</title><link href="https://james.walters.click/solving-verticals.html" rel="alternate"></link><published>2023-09-08T00:00:00-04:00</published><updated>2023-09-08T00:00:00-04:00</updated><author><name>James Walters</name></author><id>tag:james.walters.click,2023-09-08:/solving-verticals.html</id><summary type="html">&lt;p&gt;A little while back, I did some freelancing with a couple of friends for a real estate investment firm. One of my friends knows these guys. They have a great business, but the place where they were falling down was keeping investors in the loop on how things were developing …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A little while back, I did some freelancing with a couple of friends for a real estate investment firm. One of my friends knows these guys. They have a great business, but the place where they were falling down was keeping investors in the loop on how things were developing with their properties. One of the big fish asked for a web portal where he could log in and look at his investments and see at a glance how they were doing. That's where we came in.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>james.walters.click</title><link href="https://james.walters.click/" rel="alternate"></link><link href="https://james.walters.click/feeds/all.atom.xml" rel="self"></link><id>https://james.walters.click/</id><updated>2023-10-17T00:00:00-04:00</updated><subtitle>Thoughts and lessons learned along the path of software development.</subtitle><entry><title>DjangoCon 2023 Slides &amp; Resources</title><link href="https://james.walters.click/djangocon-2023-slides-resources.html" rel="alternate"></link><published>2023-10-17T00:00:00-04:00</published><updated>2023-10-17T00:00:00-04:00</updated><author><name>James Walters</name></author><id>tag:james.walters.click,2023-10-17:/djangocon-2023-slides-resources.html</id><summary type="html">&lt;p&gt;It's such a delight to give a talk at this year's DjangoCon! This is my first tech conference, as well as my first time presenting. I'd love to thank &lt;a href="https://fosstodon.org/@wsvincent"&gt;Will Vincent&lt;/a&gt;, &lt;a href="https://fosstodon.org/@ehmatthes"&gt;Eric Matthes&lt;/a&gt;, and &lt;a href="https://twitter.com/AlyssaNicoll"&gt;Alyssa Nicholl&lt;/a&gt; for all their help reviewing and refining this talk to be the best it …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It's such a delight to give a talk at this year's DjangoCon! This is my first tech conference, as well as my first time presenting. I'd love to thank &lt;a href="https://fosstodon.org/@wsvincent"&gt;Will Vincent&lt;/a&gt;, &lt;a href="https://fosstodon.org/@ehmatthes"&gt;Eric Matthes&lt;/a&gt;, and &lt;a href="https://twitter.com/AlyssaNicoll"&gt;Alyssa Nicholl&lt;/a&gt; for all their help reviewing and refining this talk to be the best it could be. I also want to thank my good friend and colleague &lt;a href="https://fosstodon.org/@CrashBandit1990"&gt;Sam Crabtree&lt;/a&gt;, without whose influence I wouldn't have learned Python and Django in the first place. 💚️ After the conference is over, I'll take some time to reflect on everything and post about it here, so keep an eye 👀️ out for that! &lt;/p&gt;
+&lt;p&gt;In the meantime, below are links to any resources I mentioned:&lt;/p&gt;
+&lt;h3&gt;Links to the Talk&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Link to &lt;a href="https://docs.google.com/presentation/d/1sIJ2NwSQD36IEj10bl1nX0z_Tf6Gfu62Z-vAyqSfKEc/edit?usp=sharing"&gt;my slides on Google Docs&lt;/a&gt;. The presenter notes contain a complete transcript of everything I said.&lt;/li&gt;
+&lt;li&gt;I'll link to the video of the talk here as soon as its uploaded.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Static Files&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Django Documentation - &lt;a href="https://docs.djangoproject.com/en/stable/howto/static-files/"&gt;How to manage static files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://whitenoise.readthedocs.io/en/latest/django.html"&gt;Whitenoise with Django Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=E613X3RBegI"&gt;Assets in Django Without Losing Your Hair&lt;/a&gt;, talk by Jacob Kaplan-Moss at PyCon 2019&lt;/li&gt;
+&lt;li&gt;RealPython, &lt;a href="https://realpython.com/django-nginx-gunicorn/#serving-static-files-directly-with-nginx"&gt;Serving Static Files Directly with nginx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Database&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Django Documentation - &lt;a href="https://docs.djangoproject.com/en/4.2/ref/databases/"&gt;Databases (API Reference)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Django Documentation - &lt;a href="https://docs.djangoproject.com/en/latest/ref/settings/#databases"&gt;&lt;code&gt;DATABASE&lt;/code&gt; Settings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fly.io, &lt;a href="https://fly.io/blog/sqlite-internals-wal/"&gt;How SQLite Scales Read Concurrency&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://datasette.io/"&gt;Datasette&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;WSGI&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Django Documentation - &lt;a href="https://docs.djangoproject.com/en/stable/howto/deployment/wsgi/"&gt;How to deploy with WSGI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=WqrCnVAkLIo"&gt;WSGI for Web Developers&lt;/a&gt;, talk by Ryan Wilson-Perkin at PyConCA 2018&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Web Servers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Django Documentation - &lt;a href="https://docs.djangoproject.com/en/stable/howto/deployment/wsgi/modwsgi/"&gt;How to use Django with Apache and mod_wsgi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;RealPython, &lt;a href="https://realpython.com/django-nginx-gunicorn/"&gt;Securely Deploy a Django App With Gunicorn, Nginx, &amp;amp; HTTPS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Deployment Tools&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Django Documentation - &lt;a href="https://docs.djangoproject.com/en/stable/howto/deployment/checklist/"&gt;Deployment Checklist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://django-simple-deploy.readthedocs.io/en/latest/"&gt;django-simple-deploy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Additional Resources&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Here's the &lt;a href="django-deployment.md"&gt;blog post&lt;/a&gt; from which this talk was adapted.&lt;/li&gt;
+&lt;li&gt;Here's the &lt;a href="https://wagtail.org/blog/2023-wagtail-deployment-survey/"&gt;2023 Wagtail Developer Survery&lt;/a&gt; I mentioned&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://vsupalov.com/django-systemd-crashcourse/"&gt;Django Systemd Crashcourse&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;footer id="footer" style="font-weight: bold; text-align: center;"&gt;
+Found this helpful or informative? &lt;a href="https://ko-fi.com/iamjameswalters"&gt;Buy me a coffee!&lt;/a&gt; ☕️
+&lt;/footer&gt;
+&lt;script&gt;
+    let now = new Date; 
+    let oct31 = new Date('2023-10-31'); 
+    if (now &lt; oct31) {
+      document.getElementById('footer').style.display = 'none';
+    }
+&lt;/script&gt;</content><category term="Python"></category><category term="Django"></category><category term="deployment"></category><category term="DjangoCon"></category><category term="portfolio"></category></entry><entry><title>Solving Verticals</title><link href="https://james.walters.click/solving-verticals.html" rel="alternate"></link><published>2023-09-08T00:00:00-04:00</published><updated>2023-09-08T00:00:00-04:00</updated><author><name>James Walters</name></author><id>tag:james.walters.click,2023-09-08:/solving-verticals.html</id><summary type="html">&lt;p&gt;A little while back, I did some freelancing with a couple of friends for a real estate investment firm. One of my friends knows these guys. They have a great business, but the place where they were falling down was keeping investors in the loop on how things were developing …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A little while back, I did some freelancing with a couple of friends for a real estate investment firm. One of my friends knows these guys. They have a great business, but the place where they were falling down was keeping investors in the loop on how things were developing with their properties. One of the big fish asked for a web portal where he could log in and look at his investments and see at a glance how they were doing. That's where we came in.&lt;/p&gt;
 &lt;p&gt;Being Python/Django guys, we decided to develop the thing in Django. We just used Bootstrap for the frontend, the clients weren't picky. Bootstrap is something we all already had experience with. I know it gets kind of a bad rap because it's been overused, but there's a reason it was overused: it's refreshing to be able to work with a CSS framework that's light on JS. You can move a lot quicker.&lt;/p&gt;
 &lt;p&gt;Here's what the investor dashboard looks like:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Investor Dashboard" src="images/integrity_dashboard.png"&gt;&lt;/p&gt;
