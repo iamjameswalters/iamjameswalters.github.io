@@ -43,7 +43,7 @@ In the meantime, below are links to any resources I mentioned:
 
 ### Additional Resources
 
-- Here's the [blog post](django-deployment.md) from which this talk was adapted.
+- Here's the [blog post]({filename}/django-deployment.md) from which this talk was adapted.
 - Here's the [2023 Wagtail Developer Survery](https://wagtail.org/blog/2023-wagtail-deployment-survey/) I mentioned
 - [Django Systemd Crashcourse](https://vsupalov.com/django-systemd-crashcourse/) 
 
