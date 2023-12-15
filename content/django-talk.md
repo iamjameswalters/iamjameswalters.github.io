@@ -11,7 +11,7 @@ In the meantime, below are links to any resources I mentioned:
 ### Links to the Talk
 
 - Link to [my slides on Google Docs](https://docs.google.com/presentation/d/1sIJ2NwSQD36IEj10bl1nX0z_Tf6Gfu62Z-vAyqSfKEc/edit?usp=sharing). The presenter notes contain a complete transcript of everything I said.
-- I'll link to the video of the talk here as soon as its uploaded.
+- Here's the [video of the talk](https://youtu.be/t-wsiW5mkgA)!
 
 ### Static Files
 
