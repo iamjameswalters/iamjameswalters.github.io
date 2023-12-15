@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Pelican" />
+  <title>james.walters.click - PyOhio 2023 Slides & Resources</title>
+  <meta name="description" content="Thoughts and lessons learned along the path of software development." />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/pico.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/prism.css" />
+  <link
+    href="https://james.walters.click/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="james.walters.click Full Atom Feed" />
+
+
+
+
+    <meta name="tags" content="Scrapy" />
+    <meta name="tags" content="web scraping" />
+    <meta name="tags" content="PyOhio" />
+    <meta name="tags" content="portfolio" />
+
+  <link href="https://james.walters.click/theme/css/fonts.css" rel="stylesheet" type="text/css" />
+  <style>
+    article img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #hero {
+      align-items: center; 
+      margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 481px) { 
+
+      article header {
+        display: grid;
+      }
+
+      article aside {
+        justify-content: end
+      }
+      
+      #hero {
+      display: flex; 
+    }
+
+    #hero div {
+      display: flex;
+    }
+
+    #hero img {
+      width: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) { 
+    #hero div {
+      display: block;
+      text-align: center;
+    }
+
+    #hero img {
+      width: 150px;
+      margin-top: 2em;
+    }
+  }
+  </style>
+  <script type="text/javascript" src="https://james.walters.click/theme/js/prism.js" defer></script>
+</head>
+
+<body>
+  <header class="container">
+  <nav>
+    <ul>
+      <li><a href="https://james.walters.click">All Posts</a></li>
+    </ul>
+    <ul>
+
+        <li><a href="https://james.walters.click/category/linux.html">Linux</a></li>
+        <li><a href="https://james.walters.click/category/meta.html">Meta</a></li>
+        <li><strong><a href="https://james.walters.click/category/python.html">Python</a></strong></li>
+        <li><a href="https://james.walters.click/category/web.html">Web</a></li>
+
+    </ul>
+  </nav>
+  </header>
+  <main style="padding-bottom: 0;padding-top: 0;" class="container">
+<section id="hero">
+  <hgroup style="grid-row: 1;width: 100%; margin-bottom: 0;">
+  <h1><a href="https://james.walters.click">james.walters.click</a></h1>
+  <h2>Thoughts and lessons learned along the path of software development.</h2>
+  </hgroup>
+
+  <div style="grid-row: 1; align-items: center; justify-content: end;">
+    <img src="https://www.gravatar.com/avatar/04574f5e4a03ae08ef293b9adc5bc2e3?s=200&d=https%3A%2F%2Fraw.githubusercontent.com%2Fiamjameswalters%2Fpiccolo%2Fmain%2Fpiccolo.png" style="border-radius: 50%;">
+  </div>
+</section>
+<article>
+  <header>
+    <hgroup>
+    <h2>
+      <a href="https://james.walters.click/pyohio-2023-slides-resources.html" rel="bookmark"
+         title="Permalink to PyOhio 2023 Slides & Resources">PyOhio 2023 Slides & Resources</a></h2>
+         <h3>By
+          <a href="https://james.walters.click/author/james-walters.html">James Walters</a>           on <time class="published" datetime="2023-12-16T00:00:00-05:00">Sat 16 December 2023</time>.</h3>
+    </hgroup>
+          <aside style="grid-column: 2; display: flex; align-items: end; margin-bottom: 30px;">
+           <div style="color: #73828c">Category: <a href="https://james.walters.click/category/python.html">Python</a>          <br />Tags: 
+            <a href="https://james.walters.click/tag/scrapy.html">Scrapy</a>,             <a href="https://james.walters.click/tag/web-scraping.html">web scraping</a>,             <a href="https://james.walters.click/tag/pyohio.html">PyOhio</a>,             <a href="https://james.walters.click/tag/portfolio.html">portfolio</a>        </div>
+          </aside>
+ 
+  </header>
+
+  <p>On the heels of DjangoCon (sorry, a restrospective is overdue for that one, it's coming, I promise), I went and signed up for another conference&mdash;<a href="http://pyohio.org/">PyOhio!</a> </p>
+<p>I decided to throw my hat in the ring with a talk on web scraping. It's a fun skill that I've put to use in a few different situations so far. Getting this down to 15 minutes was <strong>hard!</strong> My first talk was in person at a conference, but this conference was online, which was a different experience. It was harder putting together a video I think (I'm used to public speaking), but it made for a stress-free conference day!</p>
+<p>If you're reading this, I hope that means you enjoyed the talk and came here for some pointers to some related resources. Here they are:</p>
+<ul>
+<li><a href="https://www.pyohio.org/2023/talks/web-scraping-crash-course-with-python-and-scrapy/">My talk page on PyOhio.org</a></li>
+<li>The <a href="https://github.com/iamjameswalters/library-eventextractor">Github repository</a> for the demo code I wrote in the talk</li>
+<li><a href="https://docs.google.com/presentation/d/1kzZ2Jppvm9gudBCYFTHiEAamP6qjdnC17ONPA6FR0WI/edit?usp=sharing">My slides</a></li>
+<li><a href="https://docs.scrapy.org/en/latest/">Scrapy's documentation</a></li>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>, an HTML parsing library. Handy if you're dealing with ugly, malformed markup. I'm honestly more accustomed to BeautifulSoup's API and would probably reach for it instead of using the Scrapy's built-in selectors.</li>
+</ul>
+<p>I'll also include a few things that I had to cut from my talk due to time constraints.</p>
+<h3>Is Web Scraping Legal?</h3>
+<p>The answer to this is that, while there are some limitations, yes, web scraping is legal. Here are a couple of articles that get into the concerns in more detail, but yes, as long as your respecting others’ copyright, and you’re scraping publicly available data, there’s nothing illegal about that. </p>
+<ul>
+<li><a href="https://www.termsfeed.com/blog/web-scraping-laws/">TermsFeed - Web Scraping Laws</a></li>
+<li><a href="https://www.eff.org/deeplinks/2019/09/victory-ruling-hiq-v-linkedin-protects-scraping-public-data">Electronic Frontier Foundation - Victory! Ruling in hiQ v. Linkedin Protects Scraping of Public Data</a></li>
+</ul>
+<h3>Scrape Politely 😁️</h3>
+<p>It’s worth mentioning though that there are some points of etiquette to consider.</p>
+<h4>1. Robots.txt</h4>
+<p>The first rule of etiquette when web scraping is respect a website’s robots.txt. Robots.txt is a file that tells web crawlers like search engines and your scraper what kinds of things they should look at and what they should not. It’s always a good idea to follow a site’s robots.txt.</p>
+<h4>2. Terms of Use</h4>
+<p>The second rule is to respect a site’s Terms of Use. Even if you’re accessing publicly available data which is legal to do, you may be accessing data in a way that violates a site’s Terms of Use. In these cases, you may not have any legal liability, but you may get banned from the site.</p>
+<h4>3. Wait a bit between requests</h4>
+<p>And finally, a third rule of thumb to follow is, if you’re scraping several URLs on the same site, space those requests out a bit and add some wait time in between. If you’re hitting a site with a bunch of requests out of nowhere, that’s something that a lot of sites are going to interpret as the beginning of a denial of service attack rather than legitimate use, and you might get autobanned for a bit. So don’t overload a site’s resources or come at them by surprise: set up your scraper to wait a bit in these cases.</p>
+<h3>Where Do I Run My Scraper?</h3>
+<p>So now that you’ve written a web scraper, where should you run it? It’s easy to run scrapers on a one-off basis like we did in the talk, and if that’s all you need to do then this isn’t a problem for you. But you probably want to do some routine capturing of data, what’s the best way to do that? </p>
+<p>The easiest way is to schedule it as a scripted job on your own computer. In Linux you can do this with a cron job, on Windows there’s the Scheduled Tasks system. I have a scraper that runs on my work laptop every morning to gather up some non-critical data I keep an eye on for my job.</p>
+<p>Another option, if you want something going twenty-four hours a day, is to deploy something on a cloud box. Or, a great variation on this is to stand it up on a Raspberry Pi. I have plans to set up a web scraper on a <a href="https://rpilocator.com/?cat=PIZERO%2CPIZERO2">Raspberry Pi Zero</a>, it’s a tiny $15 computer that uses around one or two watts of power. It’s a great little tool to run a web scraper on.</p>
+<h3>What Should I Scrape For?</h3>
+<p>Now that you know how to scrape the web, what should you scrape for? There are lots of great ideas out there, you can google for them all day long, but a great place to start is your next job. It’s really easy to scrape job sites using these tools and you can have something always looking for that next big career opportunity for you. Searching for jobs is one of the most laborious parts of your career search, so why not automate that chore? Let the jobs come to you.</p>
+<p>This applies to your next house or car as well, you can scrape real estate listings, apartment sites, and car dealerships for find your next dream car or dream home.</p>
+<h3>Conclusion</h3>
+<p>I hope this has been informative and helpful. Web scraping is one of those programming things that I would have thought was beyond my reach, but actually it's quite doable, and it comes in handy even more often than you think. Happy scraping!</p>
+<footer style="font-weight: bold; text-align: center;">
+Found this talk useful or insightful? <a href="https://ko-fi.com/iamjameswalters">Buy me a coffee!</a> ☕️
+</footer>
+
+  </article>
+  </main>
+  <footer style="display: grid; grid-template-columns: repeat(auto-fit, [col-start] minmax(100px, 1fr) [col-end]); padding-top: 0;" class="container">
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Social:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="http://github.com/iamjameswalters" rel="me">Github</a></li>
+      <li><a href="https://fosstodon.org/@jameswalters" rel="me">Mastodon</a></li>
+      <li><a href="https://ko-fi.com/iamjameswalters" rel="me">By me a coffee (Ko-Fi)</a></li>
+      <li><a href="mailto:iamjameswalters@gmail.com" rel="me">iamjameswalters@gmail.com</a></li>
+      </ul>
+    </nav>
+    </aside>
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Links:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="https://hypermedia.systems/">Hypermedia Systems</a></li>
+      <li><a href="https://grugbrain.dev/">The Grug Brained Developer</a></li>
+      <li><a href="https://adamj.eu/tech">Adam Johnson's Blog</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Feeds:</strong></li>
+      </ul>
+      <ul>
+        <li><a href="https://james.walters.click/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <div style="grid-row: 2; grid-column: span 3;">
+      <hr />
+      <p style="padding-top: 0.5em;">
+      Built using the <a href="https://github.com/iamjameswalters/piccolo">Piccolo</a> theme, based on <a href="https://picocss.com/">Pico.css</a>.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
