@@ -7,6 +7,7 @@
 &lt;li&gt;&lt;a href="https://www.pyohio.org/2023/talks/web-scraping-crash-course-with-python-and-scrapy/"&gt;My talk page on PyOhio.org&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;The &lt;a href="https://github.com/iamjameswalters/library-eventextractor"&gt;Github repository&lt;/a&gt; for the demo code I wrote in the talk&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.google.com/presentation/d/1kzZ2Jppvm9gudBCYFTHiEAamP6qjdnC17ONPA6FR0WI/edit?usp=sharing"&gt;My slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;My &lt;a href="https://james.walters.click/the-road-less-traveled-understanding-xpaths.html"&gt;post on XPaths&lt;/a&gt; that explains how these work&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.scrapy.org/en/latest/"&gt;Scrapy's documentation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"&gt;BeautifulSoup&lt;/a&gt;, an HTML parsing library. Handy if you're dealing with ugly, malformed markup. I'm honestly more accustomed to BeautifulSoup's API and would probably reach for it instead of using the Scrapy's built-in selectors.&lt;/li&gt;
 &lt;/ul&gt;
