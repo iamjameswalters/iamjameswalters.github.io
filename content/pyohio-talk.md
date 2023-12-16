@@ -13,6 +13,7 @@ If you're reading this, I hope that means you enjoyed the talk and came here for
 - [My talk page on PyOhio.org](https://www.pyohio.org/2023/talks/web-scraping-crash-course-with-python-and-scrapy/)
 - The [Github repository](https://github.com/iamjameswalters/library-eventextractor) for the demo code I wrote in the talk
 - [My slides](https://docs.google.com/presentation/d/1kzZ2Jppvm9gudBCYFTHiEAamP6qjdnC17ONPA6FR0WI/edit?usp=sharing)
+- My [post on XPaths]({filename}/xpath.md) that explains how these work
 - [Scrapy's documentation](https://docs.scrapy.org/en/latest/)
 - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), an HTML parsing library. Handy if you're dealing with ugly, malformed markup. I'm honestly more accustomed to BeautifulSoup's API and would probably reach for it instead of using the Scrapy's built-in selectors.
 
