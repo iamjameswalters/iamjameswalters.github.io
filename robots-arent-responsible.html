@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Pelican" />
+  <title>james.walters.click - Robots Aren't Responsible</title>
+  <meta name="description" content="Thoughts and lessons learned along the path of software development." />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/pico.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/prism.css" />
+  <link
+    href="https://james.walters.click/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="james.walters.click Full Atom Feed" />
+
+
+
+
+    <meta name="tags" content="Artificial intelligence" />
+    <meta name="tags" content="ethics" />
+
+  <link href="https://james.walters.click/theme/css/fonts.css" rel="stylesheet" type="text/css" />
+  <style>
+    article img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #hero {
+      align-items: center; 
+      margin-bottom: 0;
+    }
+
+    @media only screen and (min-width: 481px) { 
+
+      article header {
+        display: grid;
+      }
+
+      article aside {
+        justify-content: end
+      }
+      
+      #hero {
+      display: flex; 
+    }
+
+    #hero div {
+      display: flex;
+    }
+
+    #hero img {
+      width: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) { 
+    #hero div {
+      display: block;
+      text-align: center;
+    }
+
+    #hero img {
+      width: 150px;
+      margin-top: 2em;
+    }
+  }
+  </style>
+  <script type="text/javascript" src="https://james.walters.click/theme/js/prism.js" defer></script>
+</head>
+
+<body>
+  <header class="container">
+  <nav>
+    <ul>
+      <li><a href="https://james.walters.click">All Posts</a></li>
+    </ul>
+    <ul>
+
+        <li><a href="https://james.walters.click/category/linux.html">Linux</a></li>
+        <li><strong><a href="https://james.walters.click/category/meta.html">Meta</a></strong></li>
+        <li><a href="https://james.walters.click/category/python.html">Python</a></li>
+        <li><a href="https://james.walters.click/category/web.html">Web</a></li>
+
+    </ul>
+  </nav>
+  </header>
+  <main style="padding-bottom: 0;padding-top: 0;" class="container">
+<section id="hero">
+  <hgroup style="grid-row: 1;width: 100%; margin-bottom: 0;">
+  <h1><a href="https://james.walters.click">james.walters.click</a></h1>
+  <h2>Thoughts and lessons learned along the path of software development.</h2>
+  </hgroup>
+
+  <div style="grid-row: 1; align-items: center; justify-content: end;">
+    <img src="https://www.gravatar.com/avatar/04574f5e4a03ae08ef293b9adc5bc2e3?s=200&d=https%3A%2F%2Fraw.githubusercontent.com%2Fiamjameswalters%2Fpiccolo%2Fmain%2Fpiccolo.png" style="border-radius: 50%;">
+  </div>
+</section>
+<article>
+  <header>
+    <hgroup>
+    <h2>
+      <a href="https://james.walters.click/robots-arent-responsible.html" rel="bookmark"
+         title="Permalink to Robots Aren't Responsible">Robots Aren't Responsible</a></h2>
+         <h3>By
+          <a href="https://james.walters.click/author/james-walters.html">James Walters</a>           on <time class="published" datetime="2024-02-08T00:00:00-05:00">Thu 08 February 2024</time>.</h3>
+    </hgroup>
+          <aside style="grid-column: 2; display: flex; align-items: end; margin-bottom: 30px;">
+           <div style="color: #73828c">Category: <a href="https://james.walters.click/category/meta.html">Meta</a>          <br />Tags: 
+            <a href="https://james.walters.click/tag/artificial-intelligence.html">Artificial intelligence</a>,             <a href="https://james.walters.click/tag/ethics.html">ethics</a>        </div>
+          </aside>
+ 
+  </header>
+
+  <p>DHH posted a recent piece called <a href="https://world.hey.com/dhh/it-s-easier-to-forgive-a-human-than-a-robot-d4a97b3a">It's easier to forgive a human than a robot</a>. In it, he highlights a fascinating problem and draws a handful of conclusions that I think head off in the wrong directions.</p>
+<p>The problem he highlights is that as AI and similar systems take over more dangerous tasks, the responsibility for mistakes shifts from humans to the systems. His main example is driving. As Tesla introduces better self-driving technology in more vehicles, DHH posits a scenario where the 40,000+ deaths due to auto accidents in the US are halved because of self-driving cars, but that leaves Tesla on the hook for 10,000 deaths. To quote him:</p>
+<blockquote>
+<p>Because let’s just say you’re Tesla. And suddenly half of everyone in America is being driven by one of your robo-cars. Your self-driving tech is highly advanced. 50% better than humans! That leaves you responsible for 10,000 deaths per year. Eeks! Okay, let’s say you’re another order of magnitude better, that’s still 1,000 deaths. Two orders? 100 deaths. Per year.</p>
+<p>The math is easy, the human element is hard, and the legal ramifications perhaps impossible.</p>
+</blockquote>
+<p>He goes on to muse about the psychological palatability of impersonal computer systems bearing blame for the deaths of thousands of people, and suggests that "maybe this is just a phase," that we'll develop mental categories for forgiving machines.</p>
+<p>I think David accidentally gives away the real nature of the problem. In his example, he doesn't say, "that leaves the self-driving system responsible for 10,000 deaths per year," he says, "that leaves <em>you</em> responsible." We wouldn't hold the computer, the self-driving car, responsible for mistake. We would hold Tesla responsible.</p>
+<h2>The Nature of Blame</h2>
+<p>This is one of those instances where despite the heaps of fog and shadow that are cast over an intellectual problem, we know the real answer within our own skin, as a gut instinct. The machine is not responsible because the machine <em>cannot</em> be responsible.</p>
+<p>With issues like killing people with cars, or medical malpractice by AI doctors, or <a href="https://simonwillison.net/2023/Apr/7/chatgpt-lies/">large language models lying</a>, these are not issues that are morally neutral. When people die, when the truth is distorted, these are moral issues. And moral issues demand moral blame. Moral blame requires volition. Machines are incapable of volition&mdash;only their makers are.</p>
+<p>To suggest that systems designed by human beings are released from the chain of moral causation and are transmuted into brute, mechanistic forces of chance such as those in the realm of nature is, at least, a controversial claim to make. I am not persuaded that the echos of human intentionality and accountability are washed away so soon after the Teslas leave the factory.</p>
+<h2>It's still the Chinese Room Argument</h2>
+<p>Conversations like this&mdash;and there are many of them these days&mdash;are encumbered by playing fast and loose with terms like "artificial intelligence." The truth is that we're training computers to be pretty decent at extremely specific tasks. AI systems have no real cognition, no model of consciousness. No volition, no will; just a program that is, ultimately, trained to guess the most likely response to a given prompt, even if that prompt is really complex compared to anything that's been possible before.</p>
+<p>It's still the <a href="https://en.wikipedia.org/wiki/Chinese_room">chinese room argument</a>.</p>
+<p>What's complicated about all of this, of course, is that whereas traditionally you could draw a one-to-one relationship between the will of the programmer and output of the program, this is no longer possible as we enter the world of AI systems whose inner machinations are too complex for us to fully understand, and behave in ways that may be predictable but not wholly deterministic. This is simply the nature of these systems. </p>
+<p>We're going to have to decide how much consistency we're going to demand from indeterminate systems like AI models before we hold the companies who develop them accountable. </p>
+
+  </article>
+  </main>
+  <footer style="display: grid; grid-template-columns: repeat(auto-fit, [col-start] minmax(100px, 1fr) [col-end]); padding-top: 0;" class="container">
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Social:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="http://github.com/iamjameswalters" rel="me">Github</a></li>
+      <li><a href="https://fosstodon.org/@jameswalters" rel="me">Mastodon</a></li>
+      <li><a href="https://ko-fi.com/iamjameswalters" rel="me">By me a coffee (Ko-Fi)</a></li>
+      <li><a href="mailto:iamjameswalters@gmail.com" rel="me">iamjameswalters@gmail.com</a></li>
+      </ul>
+    </nav>
+    </aside>
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Links:</strong></li>
+      </ul>
+      <ul>
+      <li><a href="https://hypermedia.systems/">Hypermedia Systems</a></li>
+      <li><a href="https://grugbrain.dev/">The Grug Brained Developer</a></li>
+      <li><a href="https://adamj.eu/tech">Adam Johnson's Blog</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <aside style="grid-row: 1;">
+    <nav>
+      <ul>
+        <li><strong>Feeds:</strong></li>
+      </ul>
+      <ul>
+        <li><a href="https://james.walters.click/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <div style="grid-row: 2; grid-column: span 3;">
+      <hr />
+      <p style="padding-top: 0.5em;">
+      Built using the <a href="https://github.com/iamjameswalters/piccolo">Piccolo</a> theme, based on <a href="https://picocss.com/">Pico.css</a>.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
