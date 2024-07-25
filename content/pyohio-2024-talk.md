@@ -1,17 +1,17 @@
-Title: DjangoCon 2023 Slides & Resources
-Date: 2023-10-17
+Title: PyOhio 2024 Slides & Resources
+Date: 2024-07-27
 Author: James Walters
 Category: Python
-Tags: Django, deployment, DjangoCon, portfolio
+Tags: Django, deployment, PyOhio, portfolio
+status: draft
 
-It's such a delight to give a talk at this year's DjangoCon! This is my first tech conference, as well as my first time presenting. I'd love to thank [Will Vincent](https://fosstodon.org/@wsvincent), [Eric Matthes](https://fosstodon.org/@ehmatthes), and [Alyssa Nicholl](https://twitter.com/AlyssaNicoll) for all their help reviewing and refining this talk to be the best it could be. I also want to thank my good friend and colleague [Sam Crabtree](https://fosstodon.org/@CrashBandit1990), without whose influence I wouldn't have learned Python and Django in the first place. 💚️ After the conference is over, I'll take some time to reflect on everything and post about it here, so keep an eye 👀️ out for that! 
+Man, I love PyOhio! Last year was my first one, and I was so thrilled to hear that this year's event was going to be in person for the first time since COVID. I absolutely wanted to be a part of it, and I'm so glad I got to be! Thanks to _you_ for listening to my talk! I hope it served you and helped you understand the deployment process for a Python web app a little better.
 
-In the meantime, below are links to any resources I mentioned:
+Below are links to any resources I mentioned, and a few that I didn't:
 
 ### Links to the Talk
 
 - Link to [my slides on Google Docs](https://docs.google.com/presentation/d/1sIJ2NwSQD36IEj10bl1nX0z_Tf6Gfu62Z-vAyqSfKEc/edit?usp=sharing). The presenter notes contain a complete transcript of everything I said.
-- Here's the [video of the talk](https://youtu.be/t-wsiW5mkgA)!
 
 ### Static Files
 
@@ -23,6 +23,7 @@ In the meantime, below are links to any resources I mentioned:
 ### Database
 - Django Documentation - [Databases (API Reference)](https://docs.djangoproject.com/en/4.2/ref/databases/)
 - Django Documentation - [`DATABASE` Settings](https://docs.djangoproject.com/en/latest/ref/settings/#databases)
+- [Use SQLite in production](https://www.youtube.com/watch?v=yTicYJDT1zE), talk by Tom Dyson at DjangoCon Europe 2023
 - Fly.io, [How SQLite Scales Read Concurrency](https://fly.io/blog/sqlite-internals-wal/)
 - [Datasette](https://datasette.io/)
 
@@ -42,6 +43,10 @@ In the meantime, below are links to any resources I mentioned:
 - [django-simple-deploy](https://django-simple-deploy.readthedocs.io/en/latest/)
 - [django-production](https://github.com/lincolnloop/django-production)
 
+### Docker
+
+- [Django, Docker and Postgres Tutorial - LearnDjango.com](https://learndjango.com/tutorials/django-docker-and-postgresql-tutorial)
+
 ### Additional Resources
 
 - Here's the [blog post]({filename}/django-deployment.md) from which this talk was adapted.
@@ -53,8 +58,8 @@ Found this helpful or informative? <a href="https://ko-fi.com/iamjameswalters">B
 </footer>
 <script>
     let now = new Date; 
-    let oct31 = new Date('2023-10-31'); 
-    if (now < oct31) {
+    let month_after = new Date('2024-5-27'); 
+    if (now < month_after) {
       document.getElementById('footer').style.display = 'none';
     }
 </script>
