@@ -3,7 +3,6 @@ Date: 2024-07-27
 Author: James Walters
 Category: Python
 Tags: Django, deployment, PyOhio, portfolio
-status: draft
 
 Man, I love PyOhio! Last year was my first one, and I was so thrilled to hear that this year's event was going to be in person for the first time since COVID. I absolutely wanted to be a part of it, and I'm so glad I got to be! Thanks to _you_ for listening to my talk! I hope it served you and helped you understand the deployment process for a Python web app a little better.
 
