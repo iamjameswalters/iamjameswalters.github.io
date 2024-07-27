@@ -57,7 +57,7 @@ Found this helpful or informative? <a href="https://ko-fi.com/iamjameswalters">B
 </footer>
 <script>
     let now = new Date; 
-    let month_after = new Date('2024-5-27'); 
+    let month_after = new Date('2024-8-27'); 
     if (now < month_after) {
       document.getElementById('footer').style.display = 'none';
     }
