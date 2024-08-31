@@ -13,7 +13,7 @@ Something I've been doing lately is working on a scripture memory app. I bought 
 
 One of the things this method requires is keeping a journal of all the verses you're learning, and noting how much you've reviewed each verse. But I don't really like journals, and this just sounds like an arduous bit of work that would eventually turn me off from the whole thing. It also sounds like a bit of work that can be automated rather easily.
 
-I think ideally you would want a mobile app for this. I'm not a mobile developer though, I'm a web guy. It was my burden to throw together at least a barebones functional web app that I can stand up on my own machine and use everyday. Each day, it tells me which verses I need to review, and which verses I need to learn. Currently, I'm on track to have hopefully have Ephesians memorized by the end of the year.
+I think ideally you would want a mobile app for this. I'm not a mobile developer though, I'm a web guy. It was my burden to throw together at least a barebones functional web app that I can stand up on my own machine and use. Each day, it tells me which verses I need to review, and which verses I need to learn. Currently, I'm on track to hopefully have Ephesians memorized by the end of the year.
 
 Through a remarkable turn of God's providence, it turns out a good friend of mine used to be a member of Andrew Davis's church and knows him well. So it wouldn't be impossible for me to get in touch with him and discuss making this an "official app" for the book, if I wanted to.
 
@@ -45,15 +45,17 @@ And as a musician, the investement I make into this piece of software won't be w
 
 #### New Headphones 🎧️
 
-As a remote worker, I've been trying to sort out my set up. If my wife is working, I have a noisy kid around. If she's not, I may still have a noisy kid around. If I leave to go to a coffee shop, I need to get in the zone with some good headphones.
+As a remote worker, I've been trying to sort out my setup. If my wife is working, I have a noisy kid around. If she's not, I may still have a noisy kid around. If I leave to go to a coffee shop, I need to get in the zone with some good headphones.
 
 I tried to solve this a while back with some Raycon Work earbuds, which include active noise cancelling and advertise an 8 hour battery life (times three, with recharging from the battery in the earbuds' case). But after a warranty claim on the first set, the second set still falls far short of that claim: the left earbud lasts maybe 20 minutes, and the right maybe two hours. 
 
 I still use them for listening to audiobooks as I drift off the sleep, they're great for that. But I've had them die on me in the middle of way too many video calls to trust them for work. 
 
+> Looking at their website as I write this, it looks like Raycon has upgraded all their models, and the "Work" earbuds I have don't seem to be around anymore. So if you buy something new, your mileage may vary.
+
 I had a great set of Bose active noise cancelling headphones back in the day, and that was what I was originally shopping for before I ran onto the more affordable Raycons. Bose has their own noise cancelling earbuds, and I imagine they're better than the Raycons, but they only claim a 6 hour battery life. Even if that is correct, that's not going to quite get me through a work day. But come on&mdash;how much can we really expect from a lithium battery small enough to fit in your ear?
 
-So I notice that Costco had a sale going on the full-sized QuietComfort headphones, and I sprang for them.
+I noticed that Costco had a sale going on the full-sized QuietComfort headphones, and I sprang for them.
 
 I didn't enjoy the fact that there was no manual or quickstart guide included (though of course there was a booklet containing legal warnings etc. in every conceivable language). I had to google around and find the manual, which I've tucked away. What they really want you to do is use their app to set it up. 🙄️
 
