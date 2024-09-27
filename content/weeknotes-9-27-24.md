@@ -23,7 +23,7 @@ I cracked it open just last night, and it looks like a brilliant port of Tears o
 
 But there really is this restriction to a 2D plane that sort of reigns in the excesses of BotW/TotK's physics-sandbox puzzle solving. I won't offer much critique of TotK because I've barely played it (sorry, busy these days!), but despite some gripes I was much more optimistic overall about the way TotK encouraged you to solve problems _creatively._ In Echoes, that creative problem solving out of building blocks you've already seen is center stage, but without the complexity of a full 3D physics engine, everything seems more straightforward to reason about. And, that means you can't make "shrines" or other areas that are purely physics puzzles&mdash;because you can't make the physics sandbox the main attraction, you still have to build a traditional maze and dungeon, which requires at least a certain level of _logical_ puzzle solving. The result so far is feeling like a perfect blend of both: individual screens or rooms where I have to creatively use echoes to scale a wall or surpass as challenging to get to the next room, but all of these rooms are part of a larger dungeon that you have to reason through. It's shaping up to be a rich and powerful combination.
 
-We're light on story so far, but that's to be expected from Nintendo these days, and I'm not holding this game out to be big lore builder. But who knows? Maybe they'll surprise me.
+We're light on story so far, but that's to be expected from Nintendo these days, and I'm not holding this game out to be a big lore builder. But who knows? Maybe they'll surprise me.
 
 8/10 so far from me, and I've barely started, so I'm sure that might tick up another notch!
 
