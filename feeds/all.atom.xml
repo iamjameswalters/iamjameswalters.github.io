@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>james.walters.click</title><link href="https://james.walters.click/" rel="alternate"></link><link href="https://james.walters.click/feeds/all.atom.xml" rel="self"></link><id>https://james.walters.click/</id><updated>2025-10-07T00:00:00-04:00</updated><subtitle>Thoughts and lessons learned along the path of software development.</subtitle><entry><title>A Little AI Experiment (Reading Handwriting and Counting Numbers)</title><link href="https://james.walters.click/a-little-ai-experiment-reading-handwriting-and-counting-numbers.html" rel="alternate"></link><published>2025-10-07T00:00:00-04:00</published><updated>2025-10-07T00:00:00-04:00</updated><author><name>James Walters</name></author><id>tag:james.walters.click,2025-10-07:/a-little-ai-experiment-reading-handwriting-and-counting-numbers.html</id><summary type="html">&lt;p&gt;I did an interesting experiment last night, and I thought I'd share the results here for everyone. I was going through a set of 1,000 flash cards and making a note of which ones were missing. That resulted in this list:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A small notepad containing a list of numbers" src="https://james.walters.click/images/missing_flash_cards.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://james.walters.click/images/missing_flash_cards.jpg" alt="A small notepad containing a list of numbers" style="max-width: 50%"&gt;&lt;/p&gt;
 &lt;h3&gt;The Prompt 💬️&lt;/h3&gt;
 &lt;p&gt;I decided to throw this picture …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I did an interesting experiment last night, and I thought I'd share the results here for everyone. I was going through a set of 1,000 flash cards and making a note of which ones were missing. That resulted in this list:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A small notepad containing a list of numbers" src="https://james.walters.click/images/missing_flash_cards.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://james.walters.click/images/missing_flash_cards.jpg" alt="A small notepad containing a list of numbers" style="max-width: 50%"&gt;&lt;/p&gt;
 &lt;h3&gt;The Prompt 💬️&lt;/h3&gt;
 &lt;p&gt;I decided to throw this picture at a bunch of models in &lt;a href="http://kagi.com/"&gt;Kagi Assistant&lt;/a&gt;, along with this prompt:&lt;/p&gt;
 &lt;blockquote&gt;
