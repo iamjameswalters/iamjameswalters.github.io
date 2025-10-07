@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="generator" content="Pelican" />
-  <title>james.walters.click - Piccolo: A Pelican Theme For Pico.css</title>
+  <title>james.walters.click - A Little AI Experiment (Reading Handwriting and Counting Numbers)</title>
   <meta name="description" content="Thoughts and lessons learned along the path of software development." />
   <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/pico.min.css" />
   <link rel="stylesheet" type="text/css" href="https://james.walters.click/theme/css/prism.css" />
@@ -16,8 +16,9 @@
 
 
 
-    <meta name="tags" content="Show and Tell" />
-    <meta name="tags" content="portfolio" />
+    <meta name="tags" content="Kagi" />
+    <meta name="tags" content="AI" />
+    <meta name="tags" content="LLM" />
 
   <link href="https://james.walters.click/theme/css/fonts.css" rel="stylesheet" type="text/css" />
   <style>
@@ -78,11 +79,11 @@
     </ul>
     <ul>
 
-        <li><a href="https://james.walters.click/category/ai.html">AI</a></li>
+        <li><strong><a href="https://james.walters.click/category/ai.html">AI</a></strong></li>
         <li><a href="https://james.walters.click/category/linux.html">Linux</a></li>
         <li><a href="https://james.walters.click/category/meta.html">Meta</a></li>
         <li><a href="https://james.walters.click/category/python.html">Python</a></li>
-        <li><strong><a href="https://james.walters.click/category/web.html">Web</a></strong></li>
+        <li><a href="https://james.walters.click/category/web.html">Web</a></li>
         <li><a href="https://james.walters.click/category/weeknotes.html">Weeknotes</a></li>
 
     </ul>
@@ -103,27 +104,56 @@
   <header>
     <hgroup>
     <h2>
-      <a href="https://james.walters.click/drafts/piccolo-a-pelican-theme-for-picocss.html" rel="bookmark"
-         title="Permalink to Piccolo: A Pelican Theme For Pico.css">Piccolo: A Pelican Theme For Pico.css</a></h2>
+      <a href="https://james.walters.click/a-little-ai-experiment-reading-handwriting-and-counting-numbers.html" rel="bookmark"
+         title="Permalink to A Little AI Experiment (Reading Handwriting and Counting Numbers)">A Little AI Experiment (Reading Handwriting and Counting Numbers)</a></h2>
          <h3>By
-          <a href="https://james.walters.click/author/james-walters.html">James Walters</a>           on <time class="published" datetime="2023-08-19T00:00:00-04:00">Sat 19 August 2023</time>.</h3>
+          <a href="https://james.walters.click/author/james-walters.html">James Walters</a>           on <time class="published" datetime="2025-10-07T00:00:00-04:00">Tue 07 October 2025</time>.</h3>
     </hgroup>
           <aside style="grid-column: 2; display: flex; align-items: end; margin-bottom: 30px;">
-           <div style="color: #73828c">Category: <a href="https://james.walters.click/category/web.html">Web</a>          <br />Tags: 
-            <a href="https://james.walters.click/tag/show-and-tell.html">Show and Tell</a>,             <a href="https://james.walters.click/tag/portfolio.html">portfolio</a>        </div>
+           <div style="color: #73828c">Category: <a href="https://james.walters.click/category/ai.html">AI</a>          <br />Tags: 
+            <a href="https://james.walters.click/tag/kagi.html">Kagi</a>,             <a href="https://james.walters.click/tag/ai.html">AI</a>,             <a href="https://james.walters.click/tag/llm.html">LLM</a>        </div>
           </aside>
  
   </header>
 
-  <p>Hi! I'd like to show-and-tell a little project. 😁️</p>
-<p>I'm rather fond of classless CSS libraries. You just link them in your document, and they style everything. That means they aren't really customizable, but the point is to just allow you to get something looking really nice rather quickly, without having to fuss with the styles. They're great for proofs of concept or demos of in-progress work. It's always disappointing to hammer out some backend logic, only to meet with a blank stare from someone because they aren't impressed by your ugly bare page. This alleviates that.</p>
-<p>One such library is <a href="https://picocss.com/">Pico.css</a>, which comes in a <a href="https://picocss.com/docs/classless.html">classless variant</a>.</p>
-<p>This blog is built with <a href="http://getpelican.com/">Pelican</a>, a Python static site generator. When I first got it going, I thought it'd be fun to put together my own Pelican theme. And I thought it would be easy enough to throw one together with Pico&mdash;it would look nice, and I could spend most of my time learning how Pelican puts together sites, and less time worrying about style decisions.</p>
-<p>The result is <a href="https://github.com/iamjameswalters/piccolo">Piccolo</a>, a Pelican theme based on Pico.css. <strong>And you're looking at it!</strong></p>
-<p>You might wonder, if I've been using this theme for the blog the entire time, why I'm only talking about it now. The reason is it was recently merged into the excellent <a href="https://github.com/getpelican/pelican-themes">pelican-themes</a> repository, and is now featured at <a href="http://pelicanthemes.com/">pelicanthemes.com</a>. Awesome!</p>
-<p>Do you run a Pelican site? Have you been looking at playing with a static site generator? Feel free to kick the tires on Piccolo. If you find any ways it can be improved, please <a href="https://github.com/iamjameswalters/piccolo/issues">open an issue</a>, I'll take a look. 🧐️</p>
+  <p>I did an interesting experiment last night, and I thought I'd share the results here for everyone. I was going through a set of 1,000 flash cards and making a note of which ones were missing. That resulted in this list:</p>
+<p><img alt="A small notepad containing a list of numbers" src="https://james.walters.click/images/missing_flash_cards.jpg"></p>
+<h3>The Prompt 💬️</h3>
+<p>I decided to throw this picture at a bunch of models in <a href="http://kagi.com/">Kagi Assistant</a>, along with this prompt:</p>
+<blockquote>
+<p>These numbers were missing from my set. How many does that make in total</p>
+</blockquote>
+<h3>The Results 📃️</h3>
+<p>Here are all the models I tried, along with their answers, and how much the response cost:</p>
+<ul>
+<li><a href="https://kagi.com/assistant/37a38cf0-267f-4e44-9c60-b56ba7a63b56">ChatGPT 4.1</a> (71), $0.01</li>
+<li><a href="https://kagi.com/assistant/7fda764f-fbf5-4fea-8a1a-d7c0137eee59">ChatGPT 5</a> (77, correct), $0.04</li>
+<li><a href="https://kagi.com/assistant/ebd6f386-6e4e-4532-ab2c-05c35077e1d0">Claude 4.5 Sonnet</a> (121), $0.02</li>
+<li><a href="https://kagi.com/assistant/a38af95c-33a0-46ab-8054-76e511ab51d9">Claude 4.5 Sonnet (reasoning)</a> (74), $0.04</li>
+<li><a href="https://kagi.com/assistant/6e808e5b-3b74-434d-b876-4174036911e2">DeepSeek Chat V3.1 Terminus</a> (77, correct), $0.01</li>
+<li><a href="https://kagi.com/assistant/61d58be1-b77a-493b-9d5b-365412b39b55">Gemini 2.5 Flash</a> (70), $0.003</li>
+<li><a href="https://kagi.com/assistant/59147e5c-c25a-409f-89da-081c7d830031">Gemini 2.5 Pro</a> (67), $0.004</li>
+<li><a href="https://kagi.com/assistant/f1aac9bd-9b46-408b-be27-aebbba116da9">Grok 4</a> (77, correct), $0.03</li>
+<li><a href="https://kagi.com/assistant/9f79b8cc-0374-44cb-81a3-394fc525194b">Ki</a> (61), $0.009</li>
+<li><a href="https://kagi.com/assistant/ffd69216-8bba-4e89-990c-c9654f74cd43">Ki Fast</a> (64), $0.006</li>
+<li><a href="https://kagi.com/assistant/727858e4-819d-421c-a33c-836103c5b9cf">Kimi K2</a> (77, correct), $0.004</li>
+<li><a href="https://kagi.com/assistant/802ba729-73e4-4ffc-9216-41c2680a6208">Llama 4 Maverick</a> (74), $0.005</li>
+<li><a href="https://kagi.com/assistant/71cba7e8-6362-4bab-8419-ddfcbaebe540">Mistral Medium</a> (100), $0.003</li>
+<li><a href="https://kagi.com/assistant/43573661-5d29-4733-9970-07b2ba75260a">Qwen 3 235B (reasoning)</a> (77, correct), $0.004</li>
+<li><a href="https://kagi.com/assistant/0abffa49-2f5e-44f4-9cce-a07021e31f27">Z GLM 4.5</a> (79), $0.004</li>
+</ul>
+<p>Those who got it correct, in order of cheapest:</p>
+<ol>
+<li>Kimi K2, $0.004</li>
+<li>Qwen 3 235B (reasoning), $0.004</li>
+<li>DeepSeek Chat V3.1 Terminus, $0.01</li>
+<li>Grok 4, $0.03</li>
+<li>ChatGPT 5, $0.04</li>
+</ol>
+<p>Common points of failure were not understanding what to do with the ranges (e.g. 9-14). Sometimes the models couldn't read my handwriting correctly, but this didn't actually matter (since I just wanted them to count how many I'd written down), <em>unless</em> they thought they saw the same number written twice, and tried to correct by only counting it once.</p>
+<p>Interesting to see the Chinese models doing well here, on the cheap. Grok 4 and GPT 5 will get you there, but for 3-10x cost.</p>
 <footer style="font-weight: bold; text-align: center;">
-Like my Pelican theme? <a href="https://ko-fi.com/iamjameswalters">Buy me a coffee!</a> ☕️
+Found this interesting? <a href="https://ko-fi.com/iamjameswalters">Buy me a coffee!</a> ☕️
 </footer>
 
   </article>
